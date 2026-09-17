@@ -15,41 +15,41 @@ require_once("../scripts/functions.php");
     <meta name="description" content="">
 
 	<!-- Favicon icon -->    
-	<link rel="stylesheet" href="..\etc\clientlib-default.min.001bf72e86ac4a5150822ce748c8d0ae.css" type="text/css">
-	<link rel="stylesheet" href="..\site.min.css" type="text/css">
-	<link rel="shortcut icon" type="image/png" href="..\images\<?php echo $favicon ?>">    
+	<link rel="stylesheet" href="..\etc/clientlib-default.min.001bf72e86ac4a5150822ce748c8d0ae.css" type="text/css">
+	<link rel="stylesheet" href="../site.min.css" type="text/css">
+	<link rel="shortcut icon" type="image/png" href="..\images/<?php echo $favicon ?>">    
 	<!-- Google fonts -->	
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,400,400i,500,500i,700" rel="stylesheet">			
 	<!-- Bootstrap -->    
-	<link href="..\css\bootstrap.min.css" rel="stylesheet">	
+	<link href="..\css/bootstrap.min.css" rel="stylesheet">	
 	<!-- Fontawsome -->    
-	<link href="..\css\font-awesome.min.css" rel="stylesheet">    
+	<link href="..\css/font-awesome.min.css" rel="stylesheet">    
 	<!-- Animate CSS-->    
-	<link href="..\css\animate.css" rel="stylesheet">    
+	<link href="..\css/animate.css" rel="stylesheet">    
 	<!-- menu CSS-->    
-	<link href="..\css\bootstrap-4-navbar.css" rel="stylesheet">		
+	<link href="..\css/bootstrap-4-navbar.css" rel="stylesheet">		
 	<!-- Portfolio Gallery -->    
-	<link href="..\css\filterizer.css" rel="stylesheet">	
+	<link href="..\css/filterizer.css" rel="stylesheet">	
 	<!-- Lightbox Gallery -->    
-	<link href="..\inc\lightbox\css\jquery.fancybox.css" rel="stylesheet">	
+	<link href="..\inc/lightbox/css/jquery.fancybox.css" rel="stylesheet">	
 	<!-- OWL Carousel -->	
-	<link rel="stylesheet" href="..\css\owl.carousel.min.css">	
-	<link rel="stylesheet" href="..\css\owl.theme.default.min.css">    
+	<link rel="stylesheet" href="..\css/owl.carousel.min.css">	
+	<link rel="stylesheet" href="..\css/owl.theme.default.min.css">    
 	<!-- Preloader CSS-->    
-	<link href="..\css\fakeLoader.css" rel="stylesheet">	
+	<link href="..\css/fakeLoader.css" rel="stylesheet">	
 	<!-- Main CSS -->    
-	<link href="..\style.css" rel="stylesheet">    
+	<link href="../style.css" rel="stylesheet">    
 	<!-- Default CSS Color -->     
-	<link href="..\color\default.css" rel="stylesheet">     
+	<link href="..\color/default.css" rel="stylesheet">     
 	<!-- Color CSS -->     
 	<link rel="../stylesheet" href="color/color-switcher.css">    
 	<!-- Default CSS Color -->     
-	<link href="..\color\default.css" rel="stylesheet">     
+	<link href="..\color/default.css" rel="stylesheet">     
 	<!-- Color CSS -->     
-	<link rel="stylesheet" href="..\color\color-switcher.css">	
+	<link rel="stylesheet" href="..\color/color-switcher.css">	
 	<!-- Responsive CSS -->    
-	<link href="..\css\responsive.css" rel="stylesheet">    
-	<link href="..\css\customcss.css" rel="stylesheet">    
+	<link href="..\css/responsive.css" rel="stylesheet">    
+	<link href="..\css/customcss.css" rel="stylesheet">    
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	
 <link href="library\spry\textfieldvalidation\SpryValidationTextField.css" rel="stylesheet" type="text/css">
@@ -62,7 +62,7 @@ require_once("../scripts/functions.php");
 <!--header open in header-->
 
 
-<script type="text/javascript" src="..\cdn.weglot.com\weglot.min.js"></script>
+<script type="text/javascript" src="..\cdn.weglot.com/weglot.min.js"></script>
 
   <body>
   <style>
@@ -732,7 +732,7 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 	<div class="owl-carousel main-slider">
         <div class="item creditbanner">			
 			<div class="hvrbox">
-				<img src="..\images\morning-coffee.jpg" alt="credit" class="hvrbox-layer_bottom">
+				<img src="..\images/morning-coffee.jpg" alt="credit" class="hvrbox-layer_bottom">
 			</div>	
 			<div class="banner-content">
 				<div class="innerBanner container">
@@ -942,56 +942,56 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 	    </div>		  
 	</footer>	
 	<!-- End Footer -->	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="..\1.12.4\jquery.min.js"></script>
-	<script src="..\cdnjs.cloudflare.com\ajax\libs\popper.js\1.14.0\umd\popper.min" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="..\1.12.4/jquery.min.js"></script>
+	<script src="..\cdnjs.cloudflare.com\ajax\libs\popper.js/1.14.0\umd\popper.min" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="..\js\bootstrap.min.js"></script>
+    <script src="..\js/bootstrap.min.js"></script>
 
 	<!-- Wow Script -->
-	<script src="..\js\wow.min.js"></script>
+	<script src="..\js/wow.min.js"></script>
 	<!-- Counter Script -->
-	<script src="..\js\waypoints.min.js"></script>
-	<script src="..\js\jquery.counterup.min.js"></script>
+	<script src="..\js/waypoints.min.js"></script>
+	<script src="..\js/jquery.counterup.min.js"></script>
 	<!-- Masonry Portfolio Script -->
-    <script src="..\js\jquery.filterizr.min.js"></script>
-    <script src="..\js\filterizer-controls.js"></script>
+    <script src="..\js/jquery.filterizr.min.js"></script>
+    <script src="..\js/filterizer-controls.js"></script>
     <!-- OWL Carousel js-->
-	<script src="..\js\owl.carousel.min.js"></script>  
+	<script src="..\js/owl.carousel.min.js"></script>  
 	<!-- Lightbox js -->
-	<script src="..\inc\lightbox\js\jquery.fancybox.pack.js"></script>
-	<script src="..\inc\lightbox\js\lightbox.js"></script>
+	<script src="..\inc/lightbox/js/jquery.fancybox.pack.js"></script>
+	<script src="..\inc/lightbox/js/lightbox.js"></script>
 	<!-- Google map js -->
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCa6w23do1qZsmF1Xo3atuFzzMYadTuTu0"></script>	
-	<script src="..\js\map.js"></script>
+	<script src="..\js/map.js"></script>
 	<!-- loader js-->
-    <script src="..\js\fakeLoader.min.js"></script>
+    <script src="..\js/fakeLoader.min.js"></script>
 	<!-- Scroll bottom to top -->
-	<script src="..\js\scrolltopcontrol.js"></script>
+	<script src="..\js/scrolltopcontrol.js"></script>
 	<!-- menu -->
-	<script src="..\js\bootstrap-4-navbar.js"></script>    
+	<script src="..\js/bootstrap-4-navbar.js"></script>    
     <!-- Stiky menu -->
-	<script src="..\js\jquery.sticky.js"></script>  
+	<script src="..\js/jquery.sticky.js"></script>  
     <!-- youtube popup video -->
-	<script src="..\js\jquery.magnific-popup.min.js"></script>  
+	<script src="..\js/jquery.magnific-popup.min.js"></script>  
     <!-- Color switcher js -->
-	<script src="..\js\color-switcher.js"></script> 
+	<script src="..\js/color-switcher.js"></script> 
     <!-- Color-switcher-active -->  
-    <script src="..\js\color-switcher-active.js"></script>      
+    <script src="..\js/color-switcher-active.js"></script>      
 	<!-- Custom script -->
-    <script src="..\js\custom.js"></script>
-    <script src="..\js\jquery.bxslider.min.js"></script>
+    <script src="..\js/custom.js"></script>
+    <script src="..\js/jquery.bxslider.min.js"></script>
     
     <!-- for calucator---->
-    	<script type="text/javascript" src="..\etc\clientlib-all.min.2f2dbb3959c1dcdb1f3b1f52f1375b62.js"></script>
+    	<script type="text/javascript" src="..\etc/clientlib-all.min.2f2dbb3959c1dcdb1f3b1f52f1375b62.js"></script>
 		
-		<script type="text/javascript" src="..\etc\clientlib.min.b3ec3a2325eaa4cbc74a2e2f0b755b0f.js"></script>
+		<script type="text/javascript" src="..\etc/clientlib.min.b3ec3a2325eaa4cbc74a2e2f0b755b0f.js"></script>
 		
 
 
       
 
 <script src="..\ajax.googleapis.com\ajax\libs\jquery\3.3.1\jquery.min.js"></script>
-<script src="..\js\jquery.bxslider.min.js"></script>
+<script src="..\js/jquery.bxslider.min.js"></script>
 
 <script type="text/javascript">
 	$(document).ready(function(){

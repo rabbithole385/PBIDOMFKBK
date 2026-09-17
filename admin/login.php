@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 require_once("../scripts/functions.php");
 
  ?>   
@@ -134,19 +134,19 @@ require_once("../scripts/functions.php");
                                         <li>
                                             <a href="#" class="language-item">
                                                 <img src="../images/flags/spanish.png" alt="" class="language-flag">
-                                                <span class="language-name">Español</span>
+                                                <span class="language-name">EspaÃ±ol</span>
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#" class="language-item">
                                                 <img src="../images/flags/french.png" alt="" class="language-flag">
-                                                <span class="language-name">Français</span>
+                                                <span class="language-name">FranÃ§ais</span>
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#" class="language-item">
                                                 <img src="../images/flags/turkey.png" alt="" class="language-flag">
-                                                <span class="language-name">Türkçe</span>
+                                                <span class="language-name">TÃ¼rkÃ§e</span>
                                             </a>
                                         </li>
                                     </ul>

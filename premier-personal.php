@@ -1,0 +1,1317 @@
+﻿<?php
+require_once("scripts/functions.php");
+ ?><!doctype html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+<head>
+    <title><?php echo $shortname ?> Personal | <?php echo $sitename ?></title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">       <title></title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+	<!-- Favicon icon -->    
+	<link rel="stylesheet" href="etc/clientlib-default.min.001bf72e86ac4a5150822ce748c8d0ae.css" type="text/css">
+	<link rel="stylesheet" href="site.min.css" type="text/css"><link rel="shortcut icon" type="image/png" href="images/<?php echo $favicon ?>">    <!-- Google fonts -->	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,400,400i,500,500i,700" rel="stylesheet">			<!-- Bootstrap -->    <link href="css/bootstrap.min.css" rel="stylesheet">	<!-- Fontawsome -->    <link href="css/font-awesome.min.css" rel="stylesheet">    <!-- Animate CSS-->    <link href="css/animate.css" rel="stylesheet">    <!-- menu CSS-->    <link href="css/bootstrap-4-navbar.css" rel="stylesheet">		<!-- Portfolio Gallery -->    <link href="css/filterizer.css" rel="stylesheet">	<!-- Lightbox Gallery -->    <link href="inc/lightbox/css/jquery.fancybox.css" rel="stylesheet">	<!-- OWL Carousel -->	<link rel="stylesheet" href="css/owl.carousel.min.css">	<link rel="stylesheet" href="css/owl.theme.default.min.css">    <!-- Preloader CSS-->    <link href="css/fakeLoader.css" rel="stylesheet">	<!-- Main CSS -->    <link href="style.css" rel="stylesheet">    <!-- Default CSS Color -->     <link href="color/default.css" rel="stylesheet">     <!-- Color CSS -->     <link rel="stylesheet" href="color/color-switcher.css">    <!-- Default CSS Color -->     <link href="color/default.css" rel="stylesheet">     <!-- Color CSS -->     <link rel="stylesheet" href="color/color-switcher.css">	<!-- Responsive CSS -->    <link href="css/responsive.css" rel="stylesheet">    <link href="css/customcss.css" rel="stylesheet">    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"></head>
+	<!--header open in header-->
+
+
+<script type="text/javascript" src="cdn.weglot.com/weglot.min.js"></script>
+<script>
+    Weglot.initialize({
+        api_key: 'wg_8df86c8e7dcea06b64d53f5fd49840277'
+    });
+</script>
+  <body>
+  <style>
+      .navbar-brand h2{
+          font-size:35px;
+          margin-top:2px;
+      }
+  </style>
+   <!-- Preloader -->
+    <div id="fakeloader"></div>
+	
+	<div class="top-menu-1x">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="top-menu-left">
+						<p>Need help? Contact Us</p>
+						 
+						<b><i class="fa fa-envelope"></i><a style="color:#fff;" href="mailto:<?php echo $siteemail ?>"><?php echo $siteemail ?></a></b>
+					</div>					
+				</div>				
+				<div class="col-md-6">
+					<div class="top-menu-right">
+						<div class="footer-info-right">
+							<ul>
+								<a href="index" style="background-color:white; color:black; border: 2px red; padding:2px;"><i class="fa fa-lock"></i> sign in</a>										
+								<li><a href="#"> <i class="fa fa-twitter"></i> </a></li>											
+								<li><a href="#"> <i class="fa fa-google"></i> </a></li>									
+								<li><a href="#"> <i class="fa fa-linkedin"></i> </a></li>											
+							</ul>			
+						</div>					
+					</div>				
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="bussiness-main-menu-1x">	
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">		
+					<div class="business-main-menu">		
+						<nav class="navbar navbar-expand-lg navbar-light bg-light btco-hover-menu">
+						<a class="navbar-brand" href="index-2">
+							<img style="max-width:125px;" src="<?php echo$logo ?>" class="d-inline-block align-top" alt="">		
+							<!--<h2><span style="color:#EC4550;">I</span><span style="color:#0E3768;">BG</span></h2>-->
+						</a>
+					  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					  </button>
+
+					  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+					  
+						<ul class="navbar-nav ml-auto business-nav">
+							<li class="nav-item dropdown">
+									<a class="nav-link" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										Banking Services <i class="fa fa-angle-down"></i><span style="display: block;font-size: 11px;">Accounts & services</span>
+									</a>
+									<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2" style="width:100%;background-color: #fff;">
+									
+									<div class="container">
+										<div class="business-services nav1">	
+											<div class="row">				
+												<div class="col-md-12 service-content">
+													<div class="row">
+														<div class="col-md-3">
+															<div class="single-services">
+																<div class="media">
+																  <div class="media-body">
+																	<a href="current-accounts" class="menuhead">Current Accounts</a>
+																		<li><a class="dropdown-item" href="premier-accounts"><?php echo $shortname ?> Account</a></li>
+																		<li><a class="dropdown-item" href="advance-accounts">Advance Account</a></li>
+																		<li><a class="dropdown-item" href="student-accounts">Student Account</a></li>
+																		<li><a class="dropdown-item" href="bank-accounts">Bank Account</a></li>
+																  </div>
+																</div>	
+															</div>	
+														</div>
+														<div class="col-md-3">
+															<div class="single-services">
+																<div class="media">
+																  <div class="media-body">
+																	<a href="saving-accounts" class="menuhead">Savings</a>
+																		<li><a class="dropdown-item" href="isas-accounts">ISAs</a></li>
+																		<li><a class="dropdown-item" href="online-bonus-saver">Online Bonus Saver</a></li>
+																		<li><a class="dropdown-item" href="flexible-saver">Flexible Saver</a></li>
+																  </div>
+																</div>	
+															</div>	
+														</div>
+														<div class="col-md-3">
+															<div class="single-services">
+																<div class="media">
+																  <div class="media-body">
+																	<a href="credit-cards" class="menuhead">Credit cards</a>
+																		<li><a class="dropdown-item" href="32-month-balance-transfer">32 Month Transfer Credit Card</a></li>
+																		<li><a class="dropdown-item" href="advance">Advance Credit Card</a></li>
+																		<li><a class="dropdown-item" href="dual">Dual Credit Card</a></li>
+																		<li><a class="dropdown-item" href="classic">Classic Credit Card</a></li>
+																		<li><a class="dropdown-item" href="premier"><?php echo $shortname ?> Credit Card</a></li>
+																		<li><a class="dropdown-item" href="premier-world-elite"><?php echo $shortname ?> World Elite Mastercard</a></li>
+																		<li><a class="dropdown-item" href="student">Student Credit Card</a></li>
+																  </div>
+																</div>	
+															</div>	
+														</div>
+														<div class="col-md-3">
+															<div class="single-services">
+																<div class="media">
+																  <div class="media-body">
+																	<a href="contactandsupport" class="menuhead">Services</a>
+																		<li><a class="dropdown-item" href="ways-to-bank">Ways to bank</a></li>
+																		<li><a class="dropdown-item" href="phone-banking">Voice ID</a></li>
+																		<li><a class="dropdown-item" href="contactandsupport">Contact & Support</a></li>
+																		<li><a class="dropdown-item" href="branch-locator">Find a Branch</a></li>
+																		<a style="margin-top: 15px;" href="international" class="menuhead">International services</a>
+																		<li><a class="dropdown-item" href="currency-account">Currency Account</a></li>
+																		<li><a class="dropdown-item" href="money-transfer">International Payments</a></li>
+																		<li><a class="dropdown-item" href="travel-money">Travel money</a></li>
+																  </div>
+																</div>	
+															</div>	
+														</div>
+													</div>
+												</div>									
+											</div>
+										</div>
+									</div>                                     
+								</ul>
+								</li>
+							    <li class="nav-item dropdown">
+									<a class="nav-link" href="#" id="navbarDropdownMenuLink3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										Borrowing <i class="fa fa-angle-down"></i><span style="display: block;font-size: 11px;">Loans & mortgages</span>
+									</a>
+									<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2" style="width:100%;background-color: #fff;">
+									
+									<div class="container">
+										<div class="business-services nav2">	
+											<div class="row">				
+												<div class="col-md-12 service-content">
+													<div class="row">
+														<div class="col-md-3">
+															<div class="single-services">
+																<div class="media">
+																  <div class="media-body">
+																	<a href="loans" class="menuhead">Loans</a>
+																		<li><a class="dropdown-item" href="personal-loans">Personal Loan</a></li>
+																		<li><a class="dropdown-item" href="car-loans">Car Loan</a></li>
+																		<li><a class="dropdown-item" href="flexible">Flexiloan</a></li>
+																		<li><a class="dropdown-item" href="premier-personal"><?php echo $shortname ?> Personal Loan</a></li>
+																		<li><a class="dropdown-item" href="graduate-loans">Graduate Loan</a></li>
+																  </div>
+																</div>	
+															</div>	
+															<div class="single-services">
+																<div class="media">
+																  <div class="media-body">
+																	<a href="overdrafts" class="menuhead">Overdrafts</a>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="col-md-3">
+															<div class="single-services">
+																<div class="media">
+																  <div class="media-body">
+																	<a href="mortgages" class="menuhead">Mortgages</a>
+																		<li><a class="dropdown-item" href="first-time-buyers">First time buyer</a></li>
+																		<li><a class="dropdown-item" href="95-mortgages">95% Mortgages</a></li>
+																		<li><a class="dropdown-item" href="remortgage">Remortgage</a></li>
+																		<li><a class="dropdown-item" href="buy-to-let-mortgages">Buy to let</a></li>
+																		<li><a class="dropdown-item" href="existing-customers">Existing homeowner</a></li>
+																		<li><a class="dropdown-item" href="mortgage-rates">Mortgage rates</a></li>
+																		<li><a class="dropdown-item" href="armed-forces">Armed Forces Personnel</a></li>
+																  </div>
+																</div>	
+															</div>	
+														</div>
+														<div class="col-md-3">
+															<div class="single-services">
+																<div class="media">
+																  <div class="media-body">
+																	<a href="credit-cards" class="menuhead">Credit cards</a>
+																		<li><a class="dropdown-item" href="32-month-balance-transfer">32 Month Transfer Credit Card</a></li>
+																		<li><a class="dropdown-item" href="advance">Advance Credit Card</a></li>
+																		<li><a class="dropdown-item" href="dual">Dual Credit Card</a></li>
+																		<li><a class="dropdown-item" href="classic">Classic Credit Card</a></li>
+																		<li><a class="dropdown-item" href="premier"><?php echo $shortname ?> Credit Card</a></li>
+																		<li><a class="dropdown-item" href="premier-world-elite"><?php echo $shortname ?> World Elite Mastercard</a></li>
+																		<li><a class="dropdown-item" href="student">Student Credit Card</a></li>
+																  </div>
+																</div>	
+															</div>	
+														</div>
+														<div class="col-md-3">
+															<div class="single-services">
+																<div class="media">
+																  <div class="media-body">
+																	<a href="contactandsupport" class="menuhead">Services</a>
+																		<li><a class="dropdown-item" href="contactandsupport">Help & Support</a></li>
+																		<li><a class="dropdown-item" href="money-worries">Money Worries</a></li>
+																		<li><a class="dropdown-item" href="branch-locator">Find a Branch</a></li>
+																
+																		<a style="margin-top: 15px;" href="tools-and-guides" class="menuhead">Tools & Guides</a>
+																		<li><a class="dropdown-item" href="overpayment-calculator">Overpayment calculator</a></li>
+																		<li><a class="dropdown-item" href="repayment-calculator">Repayment calculator</a></li>
+																		<li><a class="dropdown-item" href="bank-of-england-base-rate">Base rate information</a></li>
+																  </div>
+																</div>	
+															</div>	
+														</div>		
+													</div>
+												</div>									
+											</div>
+										</div>
+									</div>                                     
+								</ul>
+							  </li>	
+
+							  <li class="nav-item dropdown">
+									<a class="nav-link" href="#" id="navbarDropdownMenuLink3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										Investing <i class="fa fa-angle-down"></i><span style="display: block;font-size: 11px;">Products & analysis</span>
+									</a>
+									<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2" style="width:100%;background-color: #fff;">
+									
+									<div class="container">
+										<div class="business-services nav3">	
+											<div class="row">				
+												<div class="col-md-12 service-content">
+													<div class="row">
+														<div class="col-md-3">
+															<div class="single-services">
+																<div class="media">
+																  <div class="media-body">
+																	<a href="investing" class="menuhead">Investments</a>
+																		<li><a class="dropdown-item" href="investment-funds">Investment funds</a></li>
+																		<li><a class="dropdown-item" href="world-selection-isa">World Selection ISA</a></li>
+																		<li><a class="dropdown-item" href="sharedealing">Sharedealing</a></li>
+																		<li><a class="dropdown-item" href="premier-financial-advice"><?php echo $shortname ?> Financial Advice</a></li>
+																		<li><a class="dropdown-item" href="stand-alone-investment-advice">Stand-alone Investment Advice</a></li>
+																		<li><a class="dropdown-item" href="onshore-investment-bond">Onshore Investment Bond</a></li>
+																		<li><a class="dropdown-item" href="child-trust-funds">Child Trust fund</a></li>
+																		<li><a class="dropdown-item" href="investing">View all</a></li>
+																  </div>
+																</div>	
+															</div>	
+														</div>
+														
+														<div class="col-md-3">
+															<div class="single-services">
+																<div class="media">
+																  <div class="media-body">
+																	<a href="news" class="menuhead">Financial news & analysis</a>
+																  </div>
+																</div>	
+															</div>
+															<div class="single-services">
+																<div class="media">
+																  <div class="media-body">
+																	<a href="why-invest-with-us" class="menuhead">Why invest with us?</a>
+																	<li><a class="dropdown-item" href="why-invest-with-us">Find out more</a></li>
+																  </div>
+																</div>	
+															</div>
+															<div class="single-services">
+																<div class="media">
+																  <div class="media-body">
+																	<a href="wealth-insights" class="menuhead">Wealth Insights </a>
+																  </div>
+																</div>	
+															</div>	
+														</div>
+														<div class="col-md-3">
+															<div class="single-services">
+																<div class="media">
+																  <div class="media-body">
+																	<a href="investment-funds-online" class="menuhead">Global Investment Centre</a>
+																		<li><a class="dropdown-item" href="investment-funds-online">Find out more</a></li>
+																	</div>
+																</div>
+															</div>
+														</div>	
+														<div class="col-md-3">
+															<div class="single-services">
+																<div class="media">
+																  <div class="media-body">
+																	<a href="contactandsupport" class="menuhead">Customer support</a>
+																		<li><a class="dropdown-item" href="gsa">Log on to Global Investment<br>Centre</a></li>
+																		<li><a class="dropdown-item" href="gsa">Log on to Sharedealing</a></li>
+																		<li><a class="dropdown-item" href="contactandsupport">Investments contacts</a></li>
+																		<li><a class="dropdown-item" href="selected-investment-funds">Existing Selected Investments<br>Customers</a></li>
+																		<li><a class="dropdown-item" href="getting-started">Getting started with investing</a></li>
+																		<li><a class="dropdown-item" href="contactandsupport">View all</a></li>
+																  </div>
+																</div>	
+															</div>	
+														</div>			
+													</div>
+												</div>									
+											</div>
+										</div>
+									</div>                                     
+								</ul>
+							  </li>	
+
+							  <li class="nav-item dropdown">
+									<a class="nav-link" href="#" id="navbarDropdownMenuLink3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										Insurance <i class="fa fa-angle-down"></i><span style="display: block;font-size: 11px;">Property & family</span>
+									</a>
+									<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2" style="width:100%;background-color: #fff;">
+									
+									<div class="container">
+										<div class="business-services nav4">	
+											<div class="row">				
+												<div class="col-md-12 service-content">
+													<div class="row">
+														<div class="col-md-3">
+															<div class="single-services">
+																<div class="media">
+																  <div class="media-body">
+																	<a href="insurance" class="menuhead">Insurance</a>
+																		<li><a class="dropdown-item" href="home-insurance">Home Insurance</a></li>
+																		<li><a class="dropdown-item" href="travel-insurance">Travel Insurance</a></li>
+																		<li><a class="dropdown-item" href="student-insurance">Student Insurance</a></li>
+																		<li><a class="dropdown-item" href="insurance">View all</a></li>
+																  </div>
+																</div>	
+															</div>	
+														</div>
+														
+														<div class="col-md-3">
+															<div class="single-services">
+																<div class="media">
+																  <div class="media-body">
+																	<a href="life-insurance" class="menuhead">Life Insurance</a>
+																	<li><a class="dropdown-item" href="life-cover">Life Cover</a></li>
+																	<li><a class="dropdown-item" href="critical-illness-cover">Critical Illness Cover</a></li>
+																	<li><a class="dropdown-item" href="income-cover">Income Cover</a></li>
+																	<li><a class="dropdown-item" href="protection-telephone-advice">Telephone Protection Advice</a></li>
+																	<li><a class="dropdown-item" href="life-insurance">View all</a></li>
+																  </div>
+																</div>	
+															</div>
+														</div>
+														<div class="col-md-3">
+															<div class="single-services">
+																<div class="media">
+																  <div class="media-body">
+																	<a href="insurance" class="menuhead">Insurance Claims</a>
+																		<li><a class="dropdown-item" href="home-insurance-claims">Home Insurance Claims</a></li>
+																		<li><a class="dropdown-item" href="travel-insurance">Travel Insurance Claims</a></li>
+																		<li><a class="dropdown-item" href="car-insurance-claims">Car Insurance Claims</a></li>
+																	</div>
+																</div>
+															</div>
+														</div>	
+														<div class="col-md-3">
+															<div class="single-services">
+																<div class="media">
+																  <div class="media-body">
+																	<a href="premier-accounts" class="menuhead"><?php echo $shortname ?> Customers</a>
+																		<li><a class="dropdown-item" href="premier-travel">Travel Insurance Claims</a></li>
+																		<li><a class="dropdown-item" href="premier-car">Car Insurance Claims</a></li>
+																  </div>
+																</div>	
+															</div>	
+														</div>			
+													</div>
+												</div>									
+											</div>
+										</div>
+									</div>                                     
+								</ul>
+							  </li>
+								
+								<li class="nav-item dropdown">
+									<a class="nav-link" href="#" id="navbarDropdownMenuLink3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										Life events <i class="fa fa-angle-down"></i><span style="display: block;font-size: 11px;">Help & support</span>
+									</a>
+									<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2" style="width:100%;background-color: #fff;">
+									
+									<div class="container">
+										<div class="business-services nav5">	
+											<div class="row">				
+												<div class="col-md-12 service-content">
+													<div class="row">
+														<div class="col-md-3">
+															<div class="single-services">
+																<div class="media">
+																  <div class="media-body">
+																	<a href="life-events" class="menuhead">Life events</a>
+																		<li><a class="dropdown-item" href="dealing-with-bereavement">Bereavement support</a></li>
+																		<li><a class="dropdown-item" href="dealing-with-separation">Separation support</a></li>
+																		<li><a class="dropdown-item" href="settling-in-the-uk">Settling in the <?php echo$sitecountry ?></a></li>
+																		<li><a class="dropdown-item" href="getting-married">Getting married</a></li>
+																		<li><a class="dropdown-item" href="planning-your-retirement">Planning your retirement</a></li>
+																		<li><a class="dropdown-item" href="growing-your-wealth">Growing your wealth</a></li>
+																		<li><a class="dropdown-item" href="moving-abroad">Moving abroad</a></li>
+																		<li><a class="dropdown-item" href="life-events">View all</a></li>
+																  </div>
+																</div>	
+															</div>	
+														</div>
+														
+														<div class="col-md-3">
+															<div class="single-services">
+																<div class="media">
+																  <div class="media-body">
+																	<a href="planningtools" class="menuhead">Planning tools</a>
+																	<li><a class="dropdown-item" href="financial-health-check">Financial health check</a></li>
+																	<li><a class="dropdown-item" href="planningtools">View All</a></li>
+																  </div>
+																</div>	
+															</div>
+														</div>
+														<div class="col-md-3">
+															<div class="single-services">
+																<div class="media">
+																  <div class="media-body">
+																	<a href="protecting-what-matters" class="menuhead">Protecting what matters</a>
+																		<li><a class="dropdown-item" href="protecting-what-matters">Learn more</a></li>
+																	</div>
+																</div>
+															</div>
+														</div>	
+														<div class="col-md-3">
+															<div class="single-services">
+																<div class="media">
+																  <div class="media-body">
+																	<a href="contactandsupport" class="menuhead">Customer support</a>
+																		<li><a class="dropdown-item" href="ways-we-can-help">Ways we can help</a></li>
+																		<li><a class="dropdown-item" href="money-worries">Money Worries</a></li>
+																		<li><a class="dropdown-item" href="ways-we-can-help">Frequently asked questions</a></li>
+																		<a style="margin-top: 15px;" href="quality-conversations" class="menuhead">Individual Review</a>
+																		<li><a class="dropdown-item" href="quality-conversations">Book your review today for a<br>quick financial checkup</a></li>
+																  </div>
+																</div>	
+															</div>	
+														</div>			
+													</div>
+												</div>									
+											</div>
+										</div>
+									</div>                                     
+								</ul>
+							  </li>
+							   
+							 </ul>	
+						  </div>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	<!--NAVIGATION END--><!-- content start-->
+<style type="text/css">
+	.item.creditbanner{
+		position: relative;
+	}
+	.banner-content{
+		position: absolute;
+	    top: 45%;
+	    left: 9%;
+	    background-color: #fff;
+	    padding: 30px 50px 30px 10px;
+	    box-shadow: 0 0 23px -5px #000;
+	}
+	.banner-content h3{
+		color: #033d75;
+	    font-size: 30px;
+	    text-transform: uppercase;
+	    margin-bottom: 15px;
+	    font-weight: bold;
+	}
+	.banner-content p{
+		color: #333;
+    	font-size: 20px;
+    	margin-bottom: 0;
+	}
+	.cardWr.row{
+		box-shadow: 0 0 15px -3px #000;
+	    margin: 60px 0;
+	    border-radius: 0;
+	}
+	.cardWr .col-sm-8{
+		padding: 30px;
+	}
+	.cardWr .col-sm-4{
+		padding: 40px 30px 30px;
+	}
+	.cardWr .col-sm-4{
+		background-color: #033d75;
+		color: #fff;
+	}
+	.cardWr .col-sm-4 .col-sm-12{
+		padding:0;
+	}
+	.cardWr .col-sm-12 p{
+		margin: 8px 0 15px;
+    	font-size: 15px;
+	}
+	.cardWr .col-sm-12 h2{
+		font-size: 22px;
+	    font-weight: bold;
+	    color: #033d75;
+	    margin-bottom: 17px;
+	    margin-top: 15px;
+	    text-transform: uppercase;
+	}
+	.inner-card-wr .fa.fa-check{
+		margin-right: 10px;
+	}
+	.cardWr .col-sm-12 ul, .inner-card-wr ul{
+		padding-left: 0;
+	}
+	.inner-card-wr li {
+	    font-weight: bold;
+	}
+	.inner-card-wr ul p {
+	    margin-left: 29px;
+	    margin-bottom: 18px;
+	}
+	.card-single-wr h2{
+		font-size: 30px;
+	    position: relative;
+	    margin-left: 20px;
+	    margin-bottom: 30px;
+	    color: #033d75;
+	}
+	.card-single-wr h2::before {
+	    position: absolute;
+	    left: -25px;
+	    top: 0;
+	    width:5px;
+	    height: 32px;
+	    background-color: #EF454D;
+	    content: '';
+	}
+	.single-bolg.hover01 a:hover .blog-content{
+		color: #EF454D;
+		transition: all .5s ease 0s;
+	}
+	.inner-card-wr h3{
+		margin-bottom: 23px;
+	    font-size: 24px;
+	    margin-top: 40px;
+	    font-weight: bold;
+	    color: #EF454D;
+	}
+	.cardWr .col-sm-12 li, .inner-card-wr li{
+		display: block;
+		margin-bottom: 14px;
+	}
+	.card-single-wr {
+	    border-top: 1px solid #033d75;
+	    padding: 45px 0 22px;
+	}
+	.inner-card-wr p a{
+		color: #033d75;
+		text-decoration: underline;
+	}
+	.firstspan{
+		width:4%;
+		display: inline-block;
+		vertical-align: top;
+	}
+	.secondspan{
+		display: inline-block;
+		width:90%;
+		vertical-align: top;
+	}
+	.rightwr .col-sm-12 p{
+		font-size: 20px;
+	    line-height: 29px;
+	    margin-bottom: 20px;
+	}
+	p span{
+		display: block;
+    	font-size: 16px;
+	}
+	.readmoreWr {
+		text-align: left;
+	    margin: 20px 0 20px;
+	    padding-left: 15px;
+	}
+	.fa.fa-info-circle{
+		margin-right: 10px; 
+	}
+	i.fa.fa-check {
+	    color: #033d75;
+	    font-size: 19px;
+	}
+	.inner-card-wr.lowerwr ul {
+	    margin: 5px 0;
+	}
+	i.fa.fa-download {
+	    margin-right: 10px;
+	    color: #033d75;
+	}
+	.inner-card-wr.lowerwr li {
+	    font-weight: normal;
+	}
+	.inner-card-wr.lowerwr li a{
+		color: #033d75;
+	}
+	.inner-card-wr.lowerwr li a:hover{
+		color: #EF454D;
+	}
+	.toggleclass{
+		color: #333;
+	    font-size: 18px;
+	    font-weight: bold;
+	    text-decoration: underline;
+	    margin-bottom: 25px;
+	    display: inline-block;
+	}
+	.toggleclass:hover{
+		text-decoration: underline;
+	}
+	.logonwr{
+		margin-bottom: 35px;
+	}
+	.collapse h3 a{
+		color: #033d75;
+	}
+	.business-wr{
+		padding:0;
+		margin-top: 40px;
+	}
+	.blog-content {
+	    font-size: 22px;
+	    margin-top: 20px;
+	    text-align: left;
+	}
+	.single-bolg.hover01{
+		margin-top: 0;
+	}
+	#demo1 .col-sm-6 h3{
+		margin-top: 0;
+	}
+	.accordion {
+    	background-color: #033d75;
+	    color: #fff;
+	    cursor: pointer;
+	    padding: 18px;
+	    width:100%;
+	    border: none;
+	    text-align: left;
+	    outline: none;
+	    font-size: 16px;
+	    transition: 0.4s;
+	    margin-bottom: 2px;
+	    font-weight: bold;
+	}
+	.inner-card-wr.accordianwr{
+		margin-bottom: 45px;
+	}
+	.accordion.active, .accordion:hover {
+	    background-color: #EF454D;
+	    outline: none;
+	    border: none;
+	}
+	.accordion:after {
+	    content: '\002B';
+	    color: #fff;
+	    font-weight: bold;
+	    float: right;
+	    margin-left: 5px;
+	}
+	.accordion.active:after {
+	    content: "\2212";
+	}
+	.panel {
+	    padding: 0 18px;
+	    background-color: white;
+	    max-height: 0;
+	    overflow: hidden;
+	    transition: max-height 0.2s ease-out;
+	}
+	.inner-card-wr.accordianwr .col-sm-8 h3 {
+	    margin: 5px 0 15px 0;
+	}
+	.inner-card-wr.accordianwr .row {
+	    padding: 0;
+	    margin: 15px 0 0;
+	}
+	.inner-card-wr.accordianwr .panel{
+		padding: 0;
+    	margin: 0;
+	}
+	.panel .inner-card-wr {
+	    padding: 20px;
+	}
+	#pp_rel_basicTable_1 table th {
+	    color: #033d75;
+	    background: #ededed;
+	    text-align: left;
+	    font-size: 22px;
+	}
+	p.A-PAR22R-RW-ALL {
+	    font-size: 20px;
+	    margin: 10px 0;
+	    line-height: 28px;
+	}
+	.A-LSTU-RW-ALL li{
+		font-size: 16px;
+		font-weight: bold;
+	}
+	p.A-PAR16R-RW-ALL {
+	    font-size: 16px;
+	    line-height: 29px;
+	    margin: 7px 0;
+	}
+	table p span{
+		font-size: 22px;
+	}
+	table td, table th {
+	    padding: 20px 20px 20px 20px;
+	    padding: 1.25rem 1.25rem 1.25rem 1.25rem;
+	    font-size: .875rem;
+    	border: 1px solid #b6b7b6;
+	}
+	table td {
+	    text-align: left;
+	}
+	table p{
+		margin: 0;
+	}
+	.downloadlist li a{
+		color: #333;
+		font-weight: normal;
+	}
+	.downloadlist li a:hover{
+		color: #033d75;
+	}
+	.card-single-wr.interestwr p {
+	    font-weight: normal;
+	    font-size: 16px;
+	    margin-top: 18px;
+	    color: #333;
+	}
+	.innercalculator{
+		padding: 10px;
+	}
+	.O-LNSCALC-RW-RBWM .calc-slider .ui-slider-range, .O-LNSCALCC-RW-RBWM .calc-slider .ui-slider-range{
+		background-color: #033d75;
+	}
+	body{
+		font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"
+	}
+</style>
+<div class="business-main-slider">
+	<div class="owl-carousel main-slider">
+        <div class="item creditbanner">			
+			<div class="hvrbox">
+				<img src="images/family.jpg" alt="credit" class="hvrbox-layer_bottom">
+			</div>	
+			<div class="banner-content">
+				<div class="innerBanner container">
+					<h3><?php echo $shortname ?> Loans</h3>
+					<p>Turn your dream into a reality</p>
+				</div>
+			</div>		
+        </div>
+    </div>	
+</div>
+<div class="card-detail-wr">
+	<div class="container">
+		<div class="card-single-wr" style="border-top: none; margin-bottom: 35px;">
+			<h2>Calculate your <?php echo $sitename ?> <?php echo $shortname ?> Personal Loan</h2>
+			<p>Adjust the amount on the calculator to see how much the monthly repayments could be on your loan.</p>
+			<!--cal-->
+				<div class="calculator-wr">
+					<div class="row with-bg">
+				            <div class="sm-12">
+				                <div class="O-SMARTSPCGEN-DEV O-LNSCALC-RW-RBWM">
+				                    <div data-config="{&#34;rules&#34;:[{&#34;maxAmount&#34;:2999,&#34;apr&#34;:21.9,&#34;minMonths&#34;:12,&#34;maxMonths&#34;:60},{&#34;maxAmount&#34;:4999,&#34;apr&#34;:18.9,&#34;minMonths&#34;:12,&#34;maxMonths&#34;:60},{&#34;maxAmount&#34;:6999,&#34;apr&#34;:6.1,&#34;minMonths&#34;:12,&#34;maxMonths&#34;:60},{&#34;maxAmount&#34;:15000,&#34;apr&#34;:3.3,&#34;minMonths&#34;:12,&#34;maxMonths&#34;:60},{&#34;maxAmount&#34;:30000,&#34;apr&#34;:3.3,&#34;minMonths&#34;:12,&#34;maxMonths&#34;:96},{&#34;maxAmount&#34;:50000,&#34;apr&#34;:6.7,&#34;minMonths&#34;:12,&#34;maxMonths&#34;:96}],&#34;amountSliderStep&#34;:10,&#34;defaultAmount&#34;:10000,&#34;defaultMonths&#34;:60,&#34;minAmount&#34;:1000}" data-amount-prefix="$" data-percent-sufix="%" data-annually="p.a." class="config-holder">
+
+				                        <div class="A-PNLPEARL-RW-ALL">
+				                            <div class="row">
+
+				                                <div class="A-RELILB1V2H-RW-ALL indicator">
+				                                    <div class="placeholder placeholder-left sm-12 lg-8">
+				                                        <div class="lc-inputs row">
+				                                            <div class="leftholder sm-12 md-6 lg-6 lc-input-box">
+				                                                <label id="loansCalculatorAmountLabel" for="amount--1802935693" class="A-TYP16R-RW-ALL heading-left">How much would you like to borrow?</label>
+				                                                <span class="A-FITEXT-RW-ALL" data-calc-input="amount">
+				                                    <span class="income-prefix">$</span>
+				                                                <input id="amount--1802935693" type="text" class="input lc-income left-placeholder-1" name="amount">
+				                                                <div id="loansCalculatorAmountError" class="message message-error hide" role="alert">
+				                                                    <span class="icon icon-circle-error" aria-hidden="true"></span>
+				                                                    <span>Enter an amount between ${{min}} and ${{max}} or reduce the term below 60 months to borrow less</span>
+				                                                </div>
+				                                                </span>
+				                                                <div data-calc-slider="amount" class="calc-slider-field">
+				                                                    <div class="calc-bar">
+				                                                        <div class="calc-areas"></div>
+				                                                        <div class="calc-slider">
+				                                                            <a class="calc-slider-handle ui-slider-handle" tabindex="0"></a>
+				                                                        </div>
+				                                                        <label data-calc-label-min="" class="label-left" aria-live="off"></label>
+				                                                        <span class="visuallyhidden">Minimum</span>
+				                                                        <label data-calc-label-max="" class="label-right" aria-live="off"></label>
+				                                                        <span class="visuallyhidden">Maximum</span>
+				                                                    </div>
+				                                                </div>
+				                                            </div>
+				                                            <div class="leftholder sm-12 md-6 lg-6 lc-input-box">
+				                                                <label id="loansCalculatorMonthsLabel" for="months--1802935693" class="A-TYP16R-RW-ALL heading-right">Over how many months?</label>
+				                                                <span class="A-FITEXT-RW-ALL" data-calc-input="months">
+				                                    <input id="months--1802935693" type="text" class="input months-input" name="months">
+				                                    <div id="loansCalculatorMonthsError" class="message message-error hide" role="alert">
+				                                        <span class="icon icon-circle-error" aria-hidden="true"></span>
+				                                                <span>The loan term must be between {{min}} and {{max}}</span>
+				                                            </div>
+				                                            </span>
+				                                            <div data-calc-slider="months" class="calc-slider-field">
+				                                                <div class="calc-slider">
+				                                                    <a class="months-slider-handle ui-slider-handle" href="javascript:void(0);"></a>
+				                                                </div>
+				                                                <label data-calc-label-min="" class="label-left" aria-live="off"></label>
+				                                                <span class="visuallyhidden">Minimum</span>
+				                                                <label data-calc-label-max="" class="label-right" aria-live="off"></label>
+				                                                <span class="visuallyhidden">Maximum</span>
+				                                            </div>
+				                                        </div>
+				                                    </div>
+				                                </div>
+				                                <div class="placeholder placeholder-right sm-12 lg-4">
+
+				                                    <span class="A-TYP16B-RW-ALL">Representative example</span>
+
+				                                    <div class="result rightholder" aria-atomic="true" aria-live="assertive"></div>
+				                                </div>
+				                            </div>
+				                        </div>
+				                    </div>
+				                </div>
+				                <script type="text/html" class="result-template">
+
+				                    <table class="result-representative-table">
+				                        <tbody>
+				                            <tr>
+				                                <th scope="row">
+
+				                                    <span class="A-TYP16R-RW-ALL">Monthly repayment</span>
+
+				                                </th>
+				                                <td>
+
+				                                    <span class="A-TYP22B-RW-ALL">{{amountPrefix}}{{monthlyRepayment}}</span>
+
+				                                </td>
+				                            </tr>
+				                            <tr>
+				                                <th scope="row">
+
+				                                    <span class="A-TYP16R-RW-ALL">Total amount payable</span>
+
+				                                </th>
+				                                <td>
+
+				                                    <span class="A-TYP22B-RW-ALL">{{amountPrefix}}{{totalAmount}}</span>
+
+				                                </td>
+				                            </tr>
+				                            <tr>
+				                                <th scope="row">
+				                                    <span class="result-label">
+
+				    <span class="A-TYP16R-RW-ALL">APR</span>
+
+				                                    <span class="visuallyhidden"></span>
+				                                    </span>
+				                                </th>
+				                                <td>
+
+				                                    <span class="A-TYP22B-RW-ALL">{{apr}}{{percentSufix}}</span>
+
+				                                </td>
+				                            </tr>
+				                            <tr>
+				                                <th scope="row">
+
+				                                    <span class="A-TYP16R-RW-ALL">Interest rate p.a.</span>
+
+				                                </th>
+				                                <td>
+
+				                                    <span class="A-TYP22B-RW-ALL">{{apr}}{{percentSufix}}</span>
+
+				                                </td>
+				                            </tr>
+				                        </tbody>
+				                    </table>
+				                    <span class="arrow"></span>
+
+				                </script>
+
+				            </div>
+
+				            <div class="O-COLCTRL-RW-DEV cc-wrapper">
+
+				                <div id="pp_tools_columnControl_1">
+				                    <div class="cc cc-columns-100 ">
+
+				                        <div id="pp_tools_columnControlColumn_1" class="cc-column">
+
+				                            <div class="O-SMARTSPCGEN-DEV M-CONTMAST-RW-RBWM rich-text">
+				                                <div id="pp_tools_richtext_1" data-zone="America/New_York">
+				                                    <p class="A-PAR16R-RW-ALL">Please use the calculator or the&nbsp;<a href="content\dam\Bank\gb\pdf\HSB-MCP51204-WEB" target="_blank" rel="noopener">loans interest rate table</a>&nbsp;for more details.
+				                                        <br>
+				                                    </p>
+
+				                                </div>
+				                            </div>
+
+				                        </div>
+				                    </div>
+				                </div>
+				            </div>
+
+				        </div>
+				    </div>
+				</div>
+			<!--//-->
+		</div>
+		<div class="card-single-wr">
+			<h2>Features & benefits</h2>
+			<div class="inner-card-wr row">
+				<div class="col-sm-4">
+					<ul>
+						<li><i class="fa fa-check" aria-hidden="true"></i>Borrow from $1,000 to $50,000</li>
+						<p>Subject to our assessment of your personal financial circumstances.</p>
+
+						<li><i class="fa fa-check" aria-hidden="true"></i>Quick decision</li>
+						<p>No matter how you apply you'll get an instant credit decision (subject to planned maintenance periods).</p>
+
+						<li><i class="fa fa-check" aria-hidden="true"></i>Fixed repayment terms</li>
+						<p>You always know how much you need to repay each month.</p>
+
+						<li><i class="fa fa-check" aria-hidden="true"></i>Repayment holidays</li>
+						<p>You could have the option of a repayment holiday for the first three months or every January for the life of your loan. More interest will be payable overall.</p>
+					</ul>
+				</div>
+				<div class="col-sm-4">
+					<ul>
+						<li><i class="fa fa-check" aria-hidden="true"></i>Funds transferred same day</li>
+						<p>If approved online or in branch, you'll receive the money in your account the same day. If your application is referred, we may require further information, and the paperwork may need to be completed in branch or by post.</p>
+
+						<li><i class="fa fa-check" aria-hidden="true"></i>Apply for additional borrowing</li>
+						<p>If you already have an <?php echo $sitename ?> Personal Loan, you can apply to borrow more online.</p>
+
+						<li><i class="fa fa-check" aria-hidden="true"></i>Make overpayments</li>
+						<p>You can make overpayments without charge, which may reduce the amount of interest you pay.</p>
+					</ul>
+				</div>
+				<div class="col-sm-4">
+					<h3 style="margin-top: 0;">3.3% APR* Representative</h3>
+					<p>For loans between $7,000 and $30,000.</p>
+					<p>*The rate is subject to change and the representative APR may not be the rate you'll receive. We'll offer you a rate based on our assessment of your personal financial circumstances. The maximum APR you could be offered is 21.9%.</p>
+					<p>The APR rates may vary based on amount borrowed. Please use the calculator or the <a href="#">loans interest rate table (PDF, 57KB)</a> for more details.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="card-single-wr inner-card-wr" style="border-top: none;padding-top: 25px;">
+			<h2>Apply for an <?php echo $sitename ?> <?php echo $shortname ?> Personal Loan</h2>
+			<p><?php echo $sitename ?> <?php echo $shortname ?> is available to you, if you pay your annual income into your <?php echo $sitename ?> <?php echo $shortname ?> <?php echo $sitename ?> Account and have either:</p>
+			<ul>
+				<li><i class="fa fa-check" aria-hidden="true"></i>savings or investments of at least $50,000 with <?php echo $sitename ?> in the <?php echo$sitecountry ?>; or</li>
+				<li><i class="fa fa-check" aria-hidden="true"></i>an individual annual income of at least $75,000 and one of the following products with <?php echo $sitename ?> <?php echo$sitecountry ?>:  a mortgage, investment, life insurance or protection product.</li>
+			</ul>
+			<p>Or if you’ve already qualified for <?php echo $sitename ?> <?php echo $shortname ?> in another country.</p>
+			<div class="inner-card-wr lowerwr">
+				<a class="toggleclass" href="#" data-toggle="collapse" data-target="#demo77">Please review our complete eligibility criteria before applying</a>
+				<div id="demo77" class="collapse">
+					<h3 style="margin-top: 0;"><?php echo $sitename ?> <?php echo $shortname ?> <?php echo $sitename ?> Account eligibility criteria </h3>
+					<ul>
+						<li><i class="fa fa-check" aria-hidden="true"></i>You must hold a <?php echo $sitename ?> <?php echo $shortname ?> Account – for further information please click <a href="#">here</a></li>		
+						<li><i class="fa fa-check" aria-hidden="true"></i>You are 18 years or older</li>	
+						<li><i class="fa fa-check" aria-hidden="true"></i>Your residential address is within the EU</li>
+					</ul>
+					<p>We do not offer <?php echo $sitename ?> <?php echo $shortname ?> Personal Loans for a number of purposes including:</p>
+					
+					<ul>
+						<li><i class="fa fa-check" aria-hidden="true"></i>The purchase of property or land (both US & Overseas) including holiday homes and apartments</li>		
+						<li><i class="fa fa-check" aria-hidden="true"></i>Purchasing a joint stake in a property or buying out a joint owner</li>	
+						<li><i class="fa fa-check" aria-hidden="true"></i>Mortgage deposit (regardless of lender or country)</li>
+						<li><i class="fa fa-check" aria-hidden="true"></i>Gifting funds to third parties to support the purchase of a property, including mortgage deposit, stamp duty and solicitors fees</li>
+					</ul>
+					<p>In addition, our Personal Loan should not be provided for:</p>
+					<ul>
+						<li><i class="fa fa-check" aria-hidden="true"></i>Gambling</li>		
+						<li><i class="fa fa-check" aria-hidden="true"></i>Business purposes</li>	
+						<li><i class="fa fa-check" aria-hidden="true"></i>Share dealing</li>
+					</ul>
+					<p>Please note that this list is not exhaustive.</p>
+					<p>Our <?php echo $shortname ?> Personal Loans are subject to status.</p>
+				</div>
+				
+				<div class="row logonwr">
+					<div class="col-sm-6 applynow">
+						<h3>Not yet registered for online banking?</h3>
+						<p>It only takes a few minutes to register, and once you receive your security details, you'll be able to apply online.</p>
+						<a class="bussiness-btn-larg" href="#">Register for online banking</a>
+					</div>
+					<div class="col-sm-6 logon">
+						<h3>Apply online</h3>
+						<p>If you're registered for online banking and have an <?php echo $sitename ?> current account, you can complete your application online in minutes.</p>
+						<a href="#" class="bussiness-btn-larg">Log on and apply now</a>
+					</div>
+					<div class="col-sm-12 logon" style="margin-top: 30px;">
+						<a class="toggleclass" href="#" data-toggle="collapse" data-target="#demo777">Apply by phone or in branch</a>
+						<div id="demo777" class="collapse row">
+							<div class="col-sm-6 applynow">
+								<h3 style="margin-top: 0;">Apply by phone</h3>
+								<p>Call us on <?php echo $sitephone ?> </p>
+								<p>Textphone <?php echo$sitephone ?></p>
+								<p>Lines are open from 8am to 10pm every day (except for Christmas Day, Boxing Day and New Year's Day).</p>
+							</div>
+							<div class="col-sm-6 logon">
+								<h3>Apply in branch</h3>
+								<p><?php echo $sitename ?> Current Account customers can book an appointment to apply in branch by calling <?php echo$sitephone ?>.</p>
+								<p>Alternatively, you can book a branch appointment online.</p>
+								<p>You’ll need to bring identification, proof of your address and a recent statement from your current bank.</p>
+								<a style="margin-bottom: 10px;" href="#" class="bussiness-btn-larg">Log on to book an appointment online</a>
+								<a href="#" class="bussiness-btn-larg">Continue without logging on</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="card-single-wr downloadlist">
+			<h2>Things you should know</h2>
+			<div class="inner-card-wr">
+				<ul>
+					<li><a href="#"><i style="margin-right:10px;" class="fa fa-clone" aria-hidden="true"></i>Standards of lending practice</a></li>	
+					<li><a href="#"><i class="fa fa-download" aria-hidden="true"></i>Personal Loan Terms & Conditions (PDF, 90KB)</a></li>
+					<li><a href="#"><i class="fa fa-download" aria-hidden="true"></i>Privacy Notice (PDF, 547KB)</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="card-single-wr interestwr">
+			<h2>You might also be interested in</h2>
+			<div class="inner-card-wr">
+				<div class="business-wr">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="single-bolg hover01">
+									<a href="#">
+										<figure><img src="images/aa1.jpg" alt="slide 1" class=""></figure>
+										<div class="blog-content">
+											Personal Loan<i style="margin-left: 10px;" class="fa fa-angle-right" aria-hidden="true"></i>
+										</div>
+									</a>
+									<p>Borrow from $1,000 to $25,000 and make your plans a reality with a personal loan from Bank.</p>
+								</div>
+							</div>
+							
+							<div class="col-md-4">
+								<div class="single-bolg hover01">
+									<a href="#">
+										<figure><img src="images/aa2.jpg" alt="slide 1" class=""></figure>
+										<div class="blog-content">
+											Flexiloan<i style="margin-left: 10px;" class="fa fa-angle-right" aria-hidden="true"></i>
+										</div>
+									</a>
+									<p>Flexible repayments between 4%-10% of the loan limit (minimum repayment applies).</p>
+								</div>
+							</div>	
+
+							<div class="col-md-4">
+								<div class="single-bolg hover01">
+									<a href="#">
+										<figure><img src="images/qqq.jpg" alt="slide 1" class=""></figure>
+										<div class="blog-content">
+											Graduate Loan<i style="margin-left: 10px;" class="fa fa-angle-right" aria-hidden="true"></i>
+										</div>
+									</a>
+									<p>Available exclusively to <?php echo $sitename ?> current account customers who are within 5 years of graduation.</p>
+								</div>
+							</div>						
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--content end-->
+	<div class="col-sm-12 connectus">
+		<div class="container">
+			<div class="inner-connect">
+				<h5> Connect with us </h5>
+				<a href="#">Listening to what you have to say about our services matters to us.</a>
+			</div>
+		</div>
+	</div>
+	<!-- Start Footer -->
+	<footer class="bussiness-footer-1x">		
+	    <div class="bussiness-footer-content ">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">	
+						<h5> Help & support </h5>
+						<a href="contactandsupport">Got a question? We are here to help you </a>
+					</div>
+					<div class="col-md-3">
+						<h5> Find a branch </h5>
+						<a href="ways-we-can-help">Find your nearest <?php echo$shortname ?> Banking location</a>
+					</div>							
+					<div class="col-md-3">	
+						<h5> Our performance </h5>
+						<a href="investing">View our service dashboard to see how we're doing</a>		
+					</div>
+
+					<div class="col-md-3">	
+						<h5> About <?php echo$shortname ?> </h5>								
+						<a href="news">Careers, media, investor and corporate information</a>							
+					</div>				
+
+                    <div class="container">	
+                        <div class="">
+                            <div class="col-md-12 footer-info">
+                                <div class="row">	
+                                	<p class="text-center"><?php echo$description; ?></p>
+
+                                    <div class="col-md-3">	
+                                        <div class="footer-info-left">	
+                                            <!--<p><a href="##">Industri Banking Group</a></p>-->
+                                            <img style="max-width:125px;" src="<?php echo$footerlogo; ?>" class="d-inline-block align-top" alt="">
+                                        </div>			
+                                    </div>	
+                                    <div class="col-md-6 text-center"><?php echo$siteaddress ?><br>
+                                     <strong>Call us : <?php echo$sitephone ?></strong>
+                                    </div>		
+                                    <div class="col-md-3">
+                                        <div class="footer-info-right">
+                                            <ul>
+                                                <li><a href="##"> <i class="fa fa-facebook"></i> </a></li>										
+                                                <li><a href="##"> <i class="fa fa-twitter"></i> </a></li>											
+                                                <li><a href="##"> <i class="fa fa-google"></i> </a></li>									
+                                                <li><a href="##" target="_blank"> <i class="fa fa-linkedin"></i> </a></li>											
+                                            </ul>					
+                                        </div>					
+                                    </div>	
+                                    <div class="col-md-12 text-center text-muted">© <?php echo date("Y")?> <?php echo$sitename ?>- All rights reserved.</div>	
+                                </div>	
+                            </div>					
+                        </div>	  
+					</div>
+				</div>					
+			</div>			
+	    </div>		  
+	</footer>	
+	<!-- End Footer -->	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="1.12.4/jquery.min.js"></script>
+	<script src="cdnjs.cloudflare.com\ajax\libs\popper.js/1.14.0\umd\popper.min" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+	<!-- Wow Script -->
+	<script src="js/wow.min.js"></script>
+	<!-- Counter Script -->
+	<script src="js/waypoints.min.js"></script>
+	<script src="js/jquery.counterup.min.js"></script>
+	<!-- Masonry Portfolio Script -->
+    <script src="js/jquery.filterizr.min.js"></script>
+    <script src="js/filterizer-controls.js"></script>
+    <!-- OWL Carousel js-->
+	<script src="js/owl.carousel.min.js"></script>  
+	<!-- Lightbox js -->
+	<script src="inc/lightbox/js/jquery.fancybox.pack.js"></script>
+	<script src="inc/lightbox/js/lightbox.js"></script>
+	<!-- Google map js -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCa6w23do1qZsmF1Xo3atuFzzMYadTuTu0"></script>	
+	<script src="js/map.js"></script>
+	<!-- loader js-->
+    <script src="js/fakeLoader.min.js"></script>
+	<!-- Scroll bottom to top -->
+	<script src="js/scrolltopcontrol.js"></script>
+	<!-- menu -->
+	<script src="js/bootstrap-4-navbar.js"></script>    
+    <!-- Stiky menu -->
+	<script src="js/jquery.sticky.js"></script>  
+    <!-- youtube popup video -->
+	<script src="js/jquery.magnific-popup.min.js"></script>  
+    <!-- Color switcher js -->
+	<script src="js/color-switcher.js"></script> 
+    <!-- Color-switcher-active -->  
+    <script src="js/color-switcher-active.js"></script>      
+	<!-- Custom script -->
+    <script src="js/custom.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
+    
+    <!-- for calucator---->
+    	<script type="text/javascript" src="etc/clientlib-all.min.2f2dbb3959c1dcdb1f3b1f52f1375b62.js"></script>
+		
+		<script type="text/javascript" src="etc/clientlib.min.b3ec3a2325eaa4cbc74a2e2f0b755b0f.js"></script>
+		
+
+
+      
+
+<script src="ajax.googleapis.com\ajax\libs\jquery\3.3.1\jquery.min.js"></script>
+<script src="js/jquery.bxslider.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		if( ($(window).width() > 769) ) {
+			$('.bxsliderwr').bxSlider({
+				minSlides: 5,
+	  			maxSlides: 5,
+	  			slidewidth:230,
+	  			pager:true,
+	  			slideMargin: 50,
+	  			moveSlides:1,
+	  			auto: true,
+	  			infiniteLoop: true,
+	  			mode: 'horizontal',
+			});
+		}
+		else if( ($(window).width() < 769) && ($(window).width() > 481) ) {
+			$('.bxsliderwr').bxSlider({
+				minSlides: 3,
+	  			maxSlides: 3,
+	  			slidewidth:230,
+	  			pager:true,
+	  			slideMargin: 50,
+	  			moveSlides:1,
+	  			auto: true,
+	  			infiniteLoop: true,
+	  			mode: 'horizontal',
+			});
+		}
+		else{
+			$('.bxsliderwr').bxSlider({
+				minSlides: 3,
+	  			maxSlides: 3,
+	  			slidewidth:230,
+	  			pager:false,
+	  			slideMargin: 50,
+	  			moveSlides:1,
+	  			auto: true,
+	  			infiniteLoop: true,
+	  			mode: 'horizontal',
+			});
+		}
+	}); 
+</script>
+	 
+	<script type="text/javascript">
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>	
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/<?php echo $tawk ?>';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->  
+   
+
+</body>
+
+</html>     

@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 require_once("../scripts/functions.php");
 if(empty($_GET['userToken'])){
     header("location:customer_login");
@@ -25,42 +25,42 @@ if(empty($_GET['userToken'])){
     <meta name="description" content="">
 
 	<!-- Favicon icon -->    
-	<link rel="stylesheet" href="..\etc\clientlib-default.min.001bf72e86ac4a5150822ce748c8d0ae.css" type="text/css">
-	<link rel="stylesheet" href="..\site.min.css" type="text/css">
-	<link rel="shortcut icon" type="image/png" href="..\images\<?php echo $favicon ?>">    
+	<link rel="stylesheet" href="..\etc/clientlib-default.min.001bf72e86ac4a5150822ce748c8d0ae.css" type="text/css">
+	<link rel="stylesheet" href="../site.min.css" type="text/css">
+	<link rel="shortcut icon" type="image/png" href="..\images/<?php echo $favicon ?>">    
 	<!-- Google fonts -->	
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,400,400i,500,500i,700" rel="stylesheet">			
 	<!-- Bootstrap -->    
-	<link href="..\css\bootstrap.min.css" rel="stylesheet">	
+	<link href="..\css/bootstrap.min.css" rel="stylesheet">	
 	<!-- Fontawsome -->    
-	<link href="..\css\font-awesome.min.css" rel="stylesheet">    
+	<link href="..\css/font-awesome.min.css" rel="stylesheet">    
 	<!-- Animate CSS-->    
-	<link href="..\css\animate.css" rel="stylesheet">    
+	<link href="..\css/animate.css" rel="stylesheet">    
 	<!-- menu CSS-->    
-	<link href="..\css\bootstrap-4-navbar.css" rel="stylesheet">		
+	<link href="..\css/bootstrap-4-navbar.css" rel="stylesheet">		
 	<!-- Portfolio Gallery -->    
-	<link href="..\css\filterizer.css" rel="stylesheet">	
+	<link href="..\css/filterizer.css" rel="stylesheet">	
 	<!-- Lightbox Gallery -->    
-	<link href="..\inc\lightbox\css\jquery.fancybox.css" rel="stylesheet">	
+	<link href="..\inc/lightbox/css/jquery.fancybox.css" rel="stylesheet">	
 	<!-- OWL Carousel -->	
-	<link rel="stylesheet" href="..\css\owl.carousel.min.css">	
-	<link rel="stylesheet" href="..\css\owl.theme.default.min.css">    
+	<link rel="stylesheet" href="..\css/owl.carousel.min.css">	
+	<link rel="stylesheet" href="..\css/owl.theme.default.min.css">    
 	<!-- Preloader CSS-->    
-	<link href="..\css\fakeLoader.css" rel="stylesheet">	
+	<link href="..\css/fakeLoader.css" rel="stylesheet">	
 	<!-- Main CSS -->  
 	<link rel="stylesheet" type="text/css" href="..\css/sweetalert.css">  
-	<link href="..\style.css" rel="stylesheet">    
+	<link href="../style.css" rel="stylesheet">    
 	<!-- Default CSS Color -->     
-	<link href="..\color\default.css" rel="stylesheet">     
+	<link href="..\color/default.css" rel="stylesheet">     
 	<!-- Color CSS -->     
 	<link rel="stylesheet" href="..\color/color-switcher.css">    
 	<!-- Default CSS Color -->     
-	<link href="..\color\default.css" rel="stylesheet">     
+	<link href="..\color/default.css" rel="stylesheet">     
 	<!-- Color CSS -->     
-	<link rel="stylesheet" href="..\color\color-switcher.css">	
+	<link rel="stylesheet" href="..\color/color-switcher.css">	
 	<!-- Responsive CSS -->    
-	<link href="..\css\responsive.css" rel="stylesheet">    
-	<link href="..\css\customcss.css" rel="stylesheet">    
+	<link href="..\css/responsive.css" rel="stylesheet">    
+	<link href="..\css/customcss.css" rel="stylesheet">    
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="..\css/toastr.css">
 
@@ -303,7 +303,7 @@ if(empty($_GET['userToken'])){
 			<div class="row">
 				<div class="col-md-4">
 					<div class="single-bolg hover01">
-						<figure><img src="../images\blog-1.jpg" alt="slide 1" class=""></figure>
+						<figure><img src="../images/blog-1.jpg" alt="slide 1" class=""></figure>
 						<div class="blog-content">
 							<a href="..\index">Up to $20,000 this tax year<i style="margin-left: 10px;" class="fa fa-angle-right" aria-hidden="true"></i></a>
 							<span>Make the most of your 2019/<script>
@@ -318,7 +318,7 @@ function myFunction() {
 				</div>			
 				<div class="col-md-4">
 					<div class="single-bolg hover01">
-						<figure><img src="../images\blog-2.jpg" alt="slide 1" class=""></figure>
+						<figure><img src="../images/blog-2.jpg" alt="slide 1" class=""></figure>
 						<div class="blog-content">
 							<a href="..\index">Book an appointment<i style="margin-left: 10px;" class="fa fa-angle-right" aria-hidden="true"></i></a>
 							<span>You can now book an appointment online. Existing customers may prefer to log on to Online Banking to make booking even simpler.</span>
@@ -328,7 +328,7 @@ function myFunction() {
 				</div>			
 				<div class="col-md-4">
 					<div class="single-bolg hover01">
-						<figure><img src="../images\blog-3.jpg" alt="slide 1" class=""></figure>
+						<figure><img src="../images/blog-3.jpg" alt="slide 1" class=""></figure>
 						<div class="blog-content">
 							<a href="..\index">Ring-fencing<i style="margin-left: 10px;" class="fa fa-angle-right" aria-hidden="true"></i></a>
 							<span>We’re changing the way bank is structured in the EU.</span>
@@ -344,7 +344,7 @@ function myFunction() {
 			<div class="row" style="padding: 30px 0;">
 				<div class="col-md-3">
 					<div class="single-bolg hover01">
-						<figure><img src="../images\blog-4.jpg" alt="slide 1" class=""></figure>
+						<figure><img src="../images/blog-4.jpg" alt="slide 1" class=""></figure>
 						<div class="blog-content">
 							<a href="..\index">Insurance<i style="margin-left: 10px;" class="fa fa-angle-right" aria-hidden="true"></i></a>
 							<span>Protect your family and property.</span>
@@ -353,7 +353,7 @@ function myFunction() {
 				</div>	
 				<div class="col-md-3">
 					<div class="single-bolg hover01">
-						<figure><img src="../images\blog-5.jpg" alt="slide 1" class=""></figure>
+						<figure><img src="../images/blog-5.jpg" alt="slide 1" class=""></figure>
 						<div class="blog-content">
 							<a href="..\index">Activate your card<i style="margin-left: 10px;" class="fa fa-angle-right" aria-hidden="true"></i></a>
 							<span>There are several ways to easily activate your card. Choose the option that's best for you.</span>
@@ -362,7 +362,7 @@ function myFunction() {
 				</div>	
 				<div class="col-md-3">
 					<div class="single-bolg hover01">
-						<figure><img src="../images\blog-6.jpg" alt="slide 1" class=""></figure>
+						<figure><img src="../images/blog-6.jpg" alt="slide 1" class=""></figure>
 						<div class="blog-content">
 							<a href="..\index">Security centre<i style="margin-left: 10px;" class="fa fa-angle-right" aria-hidden="true"></i></a>
 							<span>Handy tips designed to help you stay safe online.</span>
@@ -371,7 +371,7 @@ function myFunction() {
 				</div>
 				<div class="col-md-3">
 					<div class="single-bolg hover01">
-						<figure><img src="../images\blog-7.jpg" alt="slide 1" class=""></figure>
+						<figure><img src="../images/blog-7.jpg" alt="slide 1" class=""></figure>
 						<div class="blog-content">
 							<a href="..\index">Helpful guides<i style="margin-left: 10px;" class="fa fa-angle-right" aria-hidden="true"></i></a>
 							<span>A range of guides and articles from understanding APRs to saving tips.</span>
@@ -381,7 +381,7 @@ function myFunction() {
 				<div class="col-sm-12" style="height: 1px;width:100%;background-color:##EF454D;"></div>
 				<div class="col-md-3">
 					<div class="single-bolg hover01">
-						<figure><img src="../images\bl-840.jpg" alt="slide 1" class=""></figure>
+						<figure><img src="../images/bl-840.jpg" alt="slide 1" class=""></figure>
 						<div class="blog-content">
 							<a href="..\index">Secure Key<i style="margin-left: 10px;" class="fa fa-angle-right" aria-hidden="true"></i></a>
 							<span>Handy demos to help you activate, reset and use your Secure Key</span>
@@ -390,7 +390,7 @@ function myFunction() {
 				</div>	
 				<div class="col-md-3">
 					<div class="single-bolg hover01">
-						<figure><img src="../images\blog-9.jpg" alt="slide 1" class=""></figure>
+						<figure><img src="../images/blog-9.jpg" alt="slide 1" class=""></figure>
 						<div class="blog-content">
 							<a href="..\index">Voice ID<i style="margin-left: 10px;" class="fa fa-angle-right" aria-hidden="true"></i></a>
 							<span>Make your voice your password for telephone banking</span>
@@ -399,7 +399,7 @@ function myFunction() {
 				</div>
 				<div class="col-md-3">
 					<div class="single-bolg hover01">
-						<figure><img src="../images\blog-8.jpg" alt="slide 1" class=""></figure>
+						<figure><img src="../images/blog-8.jpg" alt="slide 1" class=""></figure>
 						<div class="blog-content">
 							<a href="..\index">Card support<i style="margin-left: 10px;" class="fa fa-angle-right" aria-hidden="true"></i></a>
 							<span>Activate, lost or stolen, and general card support</span>
@@ -408,7 +408,7 @@ function myFunction() {
 				</div>
 				<div class="col-md-3">
 					<div class="single-bolg hover01">
-						<figure><img src="../images\couple-hiking-840.jpg" alt="slide 1" class=""></figure>
+						<figure><img src="../images/couple-hiking-840.jpg" alt="slide 1" class=""></figure>
 						<div class="blog-content">
 							<a href="..\index">PPI<i style="margin-left: 10px;" class="fa fa-angle-right" aria-hidden="true"></i></a>
 							<span>Payment Protection Insurance claim deadlines</span>
@@ -435,7 +435,7 @@ function myFunction() {
 					
 					<div class="col-md-5">				
 						<div class="app-present-left-2">
-							<img src="../images\Question-mark.jpg" alt="Mountains" class="">
+							<img src="../images/Question-mark.jpg" alt="Mountains" class="">
 						</div>									
 					</div>
 					<div class="col-md-6" style="background-color: rgba(3, 61, 117, .1);">		
@@ -539,57 +539,57 @@ function myFunction() {
 	    </div>		  
 	</footer>	
 	<!-- End Footer -->	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-   <script src="../1.12.4\jquery.min.js"></script>
-	<script src="../cdnjs.cloudflare.com\ajax\libs\popper.js\1.14.0\umd\popper.min" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+   <script src="../1.12.4/jquery.min.js"></script>
+	<script src="../cdnjs.cloudflare.com\ajax\libs\popper.js/1.14.0\umd\popper.min" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../js\bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 	<!-- Wow Script -->
-	<script src="../js\wow.min.js"></script>
+	<script src="../js/wow.min.js"></script>
 	<!-- Counter Script -->
-	<script src="../js\waypoints.min.js"></script>
-	<script src="../js\jquery.counterup.min.js"></script>
+	<script src="../js/waypoints.min.js"></script>
+	<script src="../js/jquery.counterup.min.js"></script>
 	<!-- Masonry Portfolio Script -->
-    <script src="../js\jquery.filterizr.min.js"></script>
-    <script src="../js\filterizer-controls.js"></script>
+    <script src="../js/jquery.filterizr.min.js"></script>
+    <script src="../js/filterizer-controls.js"></script>
     <!-- OWL Carousel js-->
-	<script src="../js\owl.carousel.min.js"></script>  
+	<script src="../js/owl.carousel.min.js"></script>  
 	<!-- Lightbox js -->
-	<script src="../inc\lightbox\js\jquery.fancybox.pack.js"></script>
-	<script src="../inc\lightbox\js\lightbox.js"></script>
+	<script src="../inc/lightbox/js/jquery.fancybox.pack.js"></script>
+	<script src="../inc/lightbox/js/lightbox.js"></script>
 	<!-- Google map js -->
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCa6w23do1qZsmF1Xo3atuFzzMYadTuTu0"></script>	
-	<script src="../js\map.js"></script>
+	<script src="../js/map.js"></script>
 	<!-- loader js-->
-    <script src="../js\fakeLoader.min.js"></script>
+    <script src="../js/fakeLoader.min.js"></script>
 	<!-- Scroll bottom to top -->
-	<script src="../js\scrolltopcontrol.js"></script>
+	<script src="../js/scrolltopcontrol.js"></script>
 	<!-- menu -->
-	<script src="../js\bootstrap-4-navbar.js"></script>    
+	<script src="../js/bootstrap-4-navbar.js"></script>    
     <!-- Stiky menu -->
-	<script src="../js\jquery.sticky.js"></script>  
+	<script src="../js/jquery.sticky.js"></script>  
     <!-- youtube popup video -->
-	<script src="../js\jquery.magnific-popup.min.js"></script>  
+	<script src="../js/jquery.magnific-popup.min.js"></script>  
     <!-- Color switcher js -->
-	<script src="../js\color-switcher.js"></script> 
+	<script src="../js/color-switcher.js"></script> 
     <!-- Color-switcher-active -->  
-    <script src="../js\color-switcher-active.js"></script>      
+    <script src="../js/color-switcher-active.js"></script>      
 	<!-- Custom script -->
-    <script src="../js\custom.js"></script>
-    <script src="../js\jquery.bxslider.min.js"></script>
+    <script src="../js/custom.js"></script>
+    <script src="../js/jquery.bxslider.min.js"></script>
     <script src="../js/toastr.js"></script>
 <script src="../js/sweetalert.js"></script>
 
     <!-- for calucator---->
-    	<script type="text/javascript" src="../etc\clientlib-all.min.2f2dbb3959c1dcdb1f3b1f52f1375b62.js"></script>
+    	<script type="text/javascript" src="../etc/clientlib-all.min.2f2dbb3959c1dcdb1f3b1f52f1375b62.js"></script>
 		
-		<script type="text/javascript" src="../etc\clientlib.min.b3ec3a2325eaa4cbc74a2e2f0b755b0f.js"></script>
+		<script type="text/javascript" src="../etc/clientlib.min.b3ec3a2325eaa4cbc74a2e2f0b755b0f.js"></script>
 		
 
 
 
-<script src="../js\jquery.bxslider.min.js"></script>
+<script src="../js/jquery.bxslider.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
 		if( ($(window).width() > 769) ) {
