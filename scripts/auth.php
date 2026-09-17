@@ -1,8 +1,17 @@
 <?php
     require_once('functions.php');
-    require ('../includes/PHPMailer.php');
-    require ('../includes/SMTP.php');
-    require ('../includes/Exception.php');    
+    if (!class_exists('PHPMailer\PHPMailer\PHPMailer')) {
+        $baseDir = dirname(__DIR__);
+        if (file_exists($baseDir . '/includes/PHPMailer.php')) {
+            require_once $baseDir . '/includes/PHPMailer.php';
+            require_once $baseDir . '/includes/SMTP.php';
+            require_once $baseDir . '/includes/Exception.php';
+        } elseif (file_exists(__DIR__ . '/../includes/PHPMailer.php')) {
+            require_once __DIR__ . '/../includes/PHPMailer.php';
+            require_once __DIR__ . '/../includes/SMTP.php';
+            require_once __DIR__ . '/../includes/Exception.php';
+        }
+    }
     //defining name spacess
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
@@ -198,7 +207,7 @@ if ($_GET['action'] == "confirm_crypto") {
             	$sql = $conn->query("UPDATE wallets SET balance = '$newBal', datecreated = '$dateCreated' WHERE id = '$idd'");
             } */
          $token = randomString(64);
-       echo "<script>window.location.href='../personal-banking/crypto?action=deposit_successful?token=$token&amount=$amount&coin=$coin';</script>";
+       echo "<script>window.location.href='../personal-banking/crypto?action=deposit_successful&token=$token&amount=$amount&coin=$coin';</script>";
        /* }else{
         	header("location:../personal-banking/crypto");}*/
 
@@ -1299,24 +1308,33 @@ if($_GET['action'] == "userPassResetConfirm"){
                 $total = ($amount + $commulative_int + $insurance_fee + $pcharge + $manage_fee);
                 $commulative_int = round(($total/$tenure),2);
                 //NOTIFY USER VIA EMAIL
-                $mail = new PHPMailer();
-                $mail->isSMTP();
-                $mail->Host = $smtp_host;
-                $mail->SMTPAuth = true;
-                $mail->CharSet = "UTF-8";
-                $mail->Username = $smtp_username; 
-                $mail->Password = $smtp_password;
-                $mail->SMTPSecure = $smtp_auth;
-                $mail->Port = $smtp_port;
-                $mail->setFrom($smtp_username, $display_name);
-                $mail->addReplyTo($smtp_username, $display_name);
-                $mail->addAddress($email);
-                $mail->Subject = "Loan Application alert";
-                $mail->isHTML(true);
-                include('../email/loan-application.php');
-                $mail->Body=$loanBody;
-                if(!$mail->Send()){ //echo 'Mailer Error: ' . $mail->ErrorInfo;
-                }else{ echo "";}
+                try {
+                    $mail = new PHPMailer();
+                    $mail->isSMTP();
+                    $mail->Host = $smtp_host;
+                    $mail->SMTPAuth = true;
+                    $mail->CharSet = "UTF-8";
+                    $mail->Username = $smtp_username; 
+                    $mail->Password = $smtp_password;
+                    $mail->SMTPSecure = $smtp_auth;
+                    $mail->Port = $smtp_port;
+                    $mail->setFrom($smtp_username, $display_name);
+                    $mail->addReplyTo($smtp_username, $display_name);
+                    $mail->addAddress($email);
+                    $mail->Subject = "Loan Application alert";
+                    $mail->isHTML(true);
+                    if (file_exists(__DIR__ . '/../email/loan-application.php')) {
+                        include(__DIR__ . '/../email/loan-application.php');
+                    } elseif (file_exists('../email/loan-application.php')) {
+                        include('../email/loan-application.php');
+                    }
+                    if (isset($loanBody)) {
+                        $mail->Body = $loanBody;
+                    }
+                    @$mail->Send();
+                } catch (\Throwable $e) {
+                    // Safe fallback if SMTP is offline
+                }
                 $dateCreated = date(" d M Y H:i a"); 
                 $ref = strtoupper("".substr($sitename, 0,3)."-".randomString(10)."");
                 $query = $conn->query("INSERT INTO loan_application (loan_amount, interest_amount, tenure, insurance_fee, manage_fee, penal_charge, status, datecreated, reason, facility, ref, userid) VALUES('$amount', '$commulative_int', '$tenure', '$insurance_fee', '$manage_fee', '$pcharge', 'pending', '$dateCreated', '$reason', '$facility', '$ref', '$userid')");

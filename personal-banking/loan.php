@@ -1,5 +1,4 @@
 <?php include 'header.php'; ?>
-loan?apNum
 
 <?php if(isset($_GET['apNum']) && $_GET['apNum'] != ""){
     $ref = $_GET['apNum'];

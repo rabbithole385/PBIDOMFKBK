@@ -22,6 +22,7 @@ if (is_dir($file)) {
     }
     $index = rtrim($file, '/') . '/index.php';
     if (file_exists($index)) {
+        chdir(dirname($index));
         require $index;
         return true;
     }
@@ -37,18 +38,20 @@ if (is_file($file)) {
     if (in_array($ext, $static, true)) {
         return false;
     }
+    if ($ext === 'php') {
+        chdir(dirname($file));
+        require $file;
+        return true;
+    }
 }
 
-// 4. Existing PHP script execution (e.g. /login.php)
-if (is_file($file)) {
-    return false;
-}
-
-// 5. Extensionless PHP route (e.g. /admin/login -> /admin/login.php, /secure/customer_login -> /secure/customer_login.php)
+// 4. Extensionless PHP route (e.g. /admin/login -> /admin/login.php, /scripts/auth -> /scripts/auth.php)
 if (is_file($file . '.php')) {
+    chdir(dirname($file . '.php'));
     require $file . '.php';
     return true;
 }
 
-// 6. Fallback route
+// 5. Fallback route
+chdir(__DIR__);
 require __DIR__ . '/index.php';
