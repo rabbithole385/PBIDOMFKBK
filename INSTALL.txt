@@ -1,0 +1,54 @@
+═══════════════════════════════════════════════════════════════════
+  OBfixed — Lightweight & Railway-Ready Online Banking Build
+═══════════════════════════════════════════════════════════════════
+
+Overview:
+  • Cleaned, optimized, lightweight rebuild of the OBfixed banking script.
+  • Stripped out 70+ unneeded scraped marketing pages and redundant 56MB zip files.
+  • Added auto-detection for Railway MySQL environment variables.
+  • Built-in one-click database seeder (/railway-seed.php).
+
+───────────────────────────────────────────────────────────────────
+Quick Railway Deployment (3 Steps):
+───────────────────────────────────────────────────────────────────
+
+1. Create a New Project on Railway:
+   • Go to https://railway.app
+   • Click "+ New Project" -> "Deploy from GitHub repo" (or upload this folder via Railway CLI: `railway up`).
+
+2. Add MySQL Database:
+   • In your Railway project canvas, click "+ Create" -> "Database" -> "Add MySQL".
+   • Railway will automatically link the MySQL service and inject:
+       MYSQLHOST, MYSQLUSER, MYSQLPASSWORD, MYSQLDATABASE, MYSQLPORT
+
+3. Initialize the Database (1-Click):
+   • Once your web service is deployed, open your Railway domain in your browser:
+       https://YOUR-APP.up.railway.app/railway-seed.php
+   • Click "Initialize & Seed Database Now".
+   • All 28 database tables and default site settings are instantly created!
+
+───────────────────────────────────────────────────────────────────
+Default Access Credentials:
+───────────────────────────────────────────────────────────────────
+
+  Admin Portal:
+    URL:        https://YOUR-APP.up.railway.app/admin/login.php
+    Email:      admin@bank.com
+    Password:   Admin@2026
+
+  Customer Online Banking:
+    URL:        https://YOUR-APP.up.railway.app/secure/customer_login.php
+    Register:   https://YOUR-APP.up.railway.app/secure/enroll-now-step1.php
+
+───────────────────────────────────────────────────────────────────
+Local Testing (Optional):
+───────────────────────────────────────────────────────────────────
+
+  If you have PHP and MySQL installed locally:
+    1. Import schema.sql into your local MySQL database.
+    2. Set environment variables (or edit scripts/connect.php):
+       DB_HOST=localhost DB_USER=root DB_PASS="" DB_NAME=bank
+    3. Run:
+       php -S localhost:8000 router.php
+    4. Open http://localhost:8000 in your browser.
+═══════════════════════════════════════════════════════════════════
