@@ -1,5 +1,7 @@
 <?php
- session_start();
+if (session_status() === PHP_SESSION_NONE && !headers_sent()) {
+    @session_start();
+}
  require_once("connect.php");
  //WEBSITE SETTINGS
  $query = @$conn->query("SELECT * FROM setting WHERE id = 1");

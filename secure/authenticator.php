@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 require_once("../scripts/functions.php");
 if(isset($_SESSION['verifiedTfa'])){
 	header("location:../personal-banking/dashboard");

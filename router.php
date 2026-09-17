@@ -1,4 +1,6 @@
 <?php
+ob_start();
+
 /**
  * Router for PHP built-in server on Railway & local environments.
  */

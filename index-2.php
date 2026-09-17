@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 require_once("scripts/functions.php");
  ?><!doctype html>
@@ -558,25 +558,45 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 					<div class="business-main-slider">
 						<div class="banner-content">
 							<div class="owl-carousel main-slider">
-								<?php include ("scripts/connect.php"); 
-                  $query = $conn->query("SELECT * FROM sliders WHERE status = 1 ORDER BY id");
-                  while($row = mysqli_fetch_array($query)){
-                	$header = $row['heading'];
-                	$content = $row['content'];
-                	$link = $row['link'];
-                	$text = $row['text'];
-                	$picture = $row['picture'];
-								  ?> 
+								<?php 
+								$query = false;
+								if (isset($conn) && $conn instanceof mysqli && !$conn->connect_error) {
+									$query = @$conn->query("SELECT * FROM sliders WHERE status = 1 ORDER BY id");
+								}
+								$sliderRows = [];
+								if ($query && $query instanceof mysqli_result && mysqli_num_rows($query) > 0) {
+									while($row = mysqli_fetch_array($query)){
+										$sliderRows[] = $row;
+									}
+								} else {
+									$sliderRows[] = [
+										'heading' => 'International Personal Banking',
+										'content' => 'Managing your money across borders has never been easier. Enjoy world-class digital services.',
+										'link'    => 'secure/customer_login',
+										'text'    => 'Get Started',
+										'picture' => 'images/b1.jpg'
+									];
+								}
+								foreach($sliderRows as $row){
+									$header = $row['heading'];
+									$content = $row['content'];
+									$link = $row['link'];
+									$text = $row['text'];
+									$picture = $row['picture'];
+									if (!empty('') && strpos($picture, 'images/') === 0) {
+										$picture = '' . $picture;
+									}
+								?> 
 								<div class="item">	
 									<div class="innerBannerContent row">
 										<div class="col-sm-7">
-											<h2><?php echo$header ?></h2>
-											<p><?php echo$content ?></p>
-											<a href="<?php echo$link ?>"><?php echo$text ?></a>
+											<h2><?php echo $header ?></h2>
+											<p><?php echo $content ?></p>
+											<a href="<?php echo $link ?>"><?php echo $text ?></a>
 											<p></p>
 										</div>
 										<div class="col-sm-5">
-											<img src="<?php echo$picture ?>" alt="">
+											<img src="<?php echo $picture ?>" alt="">
 										</div>
 									</div>
 								</div>

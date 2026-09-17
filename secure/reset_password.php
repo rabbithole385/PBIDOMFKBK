@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 require_once("../scripts/functions.php");
 if(empty($_GET['userToken'])){
     header("location:customer_login");

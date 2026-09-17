@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 require_once("scripts/functions.php");
  ?><!doctype html>
 <html lang="en">

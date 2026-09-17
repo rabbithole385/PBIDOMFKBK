@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 /*
  * This file is part of Crawler Detect - the web crawler detection library.

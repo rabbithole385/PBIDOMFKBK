@@ -1,4 +1,4 @@
-﻿
+
 <script type="text/javascript" src="cdn.weglot.com/weglot.min.js"></script>
 
   <body>
