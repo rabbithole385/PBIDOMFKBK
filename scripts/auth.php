@@ -1251,7 +1251,10 @@ if($_GET['action'] == "userPassResetConfirm"){
 
                             <div> 
                                 <form action="../scripts/auth?action=acceptLoan" method="post" id="acceptForm">
-                                    <input type="hidden" name="id">
+                                    <input type="hidden" name="amount" value="<?php echo htmlspecialchars($amount); ?>">
+                                    <input type="hidden" name="tenure" value="<?php echo htmlspecialchars($tenure); ?>">
+                                    <input type="hidden" name="facility" value="<?php echo htmlspecialchars($facility); ?>">
+                                    <input type="hidden" name="reason" value="<?php echo htmlspecialchars($reason); ?>">
                                     <button class="btn btn-primary" type="submit" id="btn2">Request Loan</button>
                                 </form>
                             <div id="Result2"></div>
@@ -1293,13 +1296,13 @@ if($_GET['action'] == "userPassResetConfirm"){
     }
         }
             if($_GET['action'] == "acceptLoan"){
-                include("userdata.php");
+                require_once __DIR__ . '/userdata.php';
                 if(isset($_POST)){
-                $info = $_SESSION['loanInfo'];
-                $amount = $info['amount'];
-                $tenure = $info['tenure'];
-                $facility = $info['facility'];
-                $reason = $info['reason'];
+                $amount = !empty($_POST['amount']) ? (float)$_POST['amount'] : (float)($_SESSION['loanInfo']['amount'] ?? 0);
+                $tenure = !empty($_POST['tenure']) ? (int)$_POST['tenure'] : (int)($_SESSION['loanInfo']['tenure'] ?? 12);
+                if ($tenure <= 0) $tenure = 12;
+                $facility = !empty($_POST['facility']) ? filterString($_POST['facility']) : filterString($_SESSION['loanInfo']['facility'] ?? 'Personal Home Loans');
+                $reason = !empty($_POST['reason']) ? filterString($_POST['reason']) : filterString($_SESSION['loanInfo']['reason'] ?? 'Loan Request');
                 $monthly_int_rate = ($interest_rate/100 * $amount);
                 $pcharge = ($penal_charge/100 * $amount);
                 $insurance_fee = ($insurance/100 * $amount);
@@ -1338,7 +1341,7 @@ if($_GET['action'] == "userPassResetConfirm"){
                 $dateCreated = date(" d M Y H:i a"); 
                 $ref = strtoupper("".substr($sitename, 0,3)."-".randomString(10)."");
                 $query = $conn->query("INSERT INTO loan_application (loan_amount, interest_amount, tenure, insurance_fee, manage_fee, penal_charge, status, datecreated, reason, facility, ref, userid) VALUES('$amount', '$commulative_int', '$tenure', '$insurance_fee', '$manage_fee', '$pcharge', 'pending', '$dateCreated', '$reason', '$facility', '$ref', '$userid')");
-                i_redirect("loan?apNum=$ref");
+                echo "<script>window.location.href='loan?apNum=$ref';</script>";
               
 }
 }

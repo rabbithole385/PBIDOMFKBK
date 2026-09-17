@@ -265,11 +265,11 @@
                                                             <li>I waive <?php echo$loan_period ?>-days maximum cooling off period to enable disbursement.</li>
                                                             <li>I accept that <?php echo$sitename ?> reserved the right to decline my loan request.</li>
                                                         </ul>
-                                                        <div id="Result"></div>
-                                        <div class="buysell-field form-action">
+                                                        <div class="buysell-field form-action">
                                             <button type="submit" class="btn btn-lg btn-block btn-primary" id="btn">Continue</button>
                                         </div>
                                     </form><!-- .buysell-form -->
+                                    <div id="Result"></div>
                                 </div><!-- .buysell-block -->
                             </div><!-- .buysell -->
                         </div>
@@ -301,8 +301,7 @@
 	   });
 	}));
 });
-        $(document).ready(function (e) {
-        	$("#acceptForm").on('submit',(function(e) {
+        $(document).off('submit', '#acceptForm').on('submit', '#acceptForm', function(e) {
         	document.getElementById("btn2").disabled = true;	
 		    e.preventDefault();
 		    $.ajax({
