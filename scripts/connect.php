@@ -4,13 +4,22 @@
  * Includes Seamless Zero-Config Auto-Seeder on first run.
  */
 
+global $conn;
+
 // Helper function to safely read environment variables across PHP configurations
-function get_cfg_env($key, $default = '') {
-    $v = getenv($key);
-    if ($v !== false && $v !== '') return $v;
-    if (isset($_ENV[$key]) && $_ENV[$key] !== '') return $_ENV[$key];
-    if (isset($_SERVER[$key]) && $_SERVER[$key] !== '') return $_SERVER[$key];
-    return $default;
+if (!function_exists('get_cfg_env')) {
+    function get_cfg_env($key, $default = '') {
+        $v = getenv($key);
+        if ($v !== false && $v !== '') return $v;
+        if (isset($_ENV[$key]) && $_ENV[$key] !== '') return $_ENV[$key];
+        if (isset($_SERVER[$key]) && $_SERVER[$key] !== '') return $_SERVER[$key];
+        return $default;
+    }
+}
+
+// Reuse existing connection if already established in current request
+if (isset($conn) && $conn instanceof mysqli && @$conn->ping()) {
+    return;
 }
 
 // 1. Check for combined URL connection string (Railway MySQL standard)

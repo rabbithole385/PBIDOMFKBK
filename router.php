@@ -16,6 +16,10 @@ if ($uri === '/' || $uri === '') {
 
 // 2. Directory index (e.g. /admin/ -> /admin/index.php, /personal-banking/ -> /personal-banking/index.php)
 if (is_dir($file)) {
+    if (substr($uri, -1) !== '/') {
+        header("Location: " . $uri . "/", true, 301);
+        exit;
+    }
     $index = rtrim($file, '/') . '/index.php';
     if (file_exists($index)) {
         require $index;
@@ -35,10 +39,16 @@ if (is_file($file)) {
     }
 }
 
-// 4. Existing PHP script execution
+// 4. Existing PHP script execution (e.g. /login.php)
 if (is_file($file)) {
     return false;
 }
 
-// 5. Fallback route
+// 5. Extensionless PHP route (e.g. /admin/login -> /admin/login.php, /secure/customer_login -> /secure/customer_login.php)
+if (is_file($file . '.php')) {
+    require $file . '.php';
+    return true;
+}
+
+// 6. Fallback route
 require __DIR__ . '/index.php';
