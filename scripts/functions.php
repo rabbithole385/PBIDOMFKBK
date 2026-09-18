@@ -12,7 +12,7 @@ if (session_status() === PHP_SESSION_NONE && !headers_sent()) {
     $favicon = "images/favicon.ico";
     $register = 1;
     $sitephone = "+1 (800) 555-0199";
-    $siteemail = "support@bank.com";
+    $siteemail = "support@pbigroups.com";
     $siteaddress = "100 Financial Way, New York, NY";
     $description = "Secure online banking platform";
     $seo = "online banking, secure transfer";
@@ -219,6 +219,17 @@ $smtpquery = $conn->query("SELECT * FROM smtp_setting WHERE id = 1");
 
 }
 //end of smtpsetting
+// Environment variables override for zero-friction Railway / Cloud setup
+if (!empty(get_cfg_env('SMTP_HOST'))) $smtp_host = get_cfg_env('SMTP_HOST');
+if (!empty(get_cfg_env('SMTP_USER'))) $smtp_username = get_cfg_env('SMTP_USER');
+if (!empty(get_cfg_env('SMTP_USERNAME'))) $smtp_username = get_cfg_env('SMTP_USERNAME');
+if (!empty(get_cfg_env('SMTP_PASS'))) $smtp_password = get_cfg_env('SMTP_PASS');
+if (!empty(get_cfg_env('SMTP_PASSWORD'))) $smtp_password = get_cfg_env('SMTP_PASSWORD');
+if (!empty(get_cfg_env('SMTP_PORT'))) $smtp_port = get_cfg_env('SMTP_PORT');
+if (!empty(get_cfg_env('SMTP_AUTH'))) $smtp_auth = get_cfg_env('SMTP_AUTH');
+if (!empty(get_cfg_env('SMTP_FROM_NAME'))) $display_name = get_cfg_env('SMTP_FROM_NAME');
+if (!empty(get_cfg_env('SITE_EMAIL'))) $siteemail = get_cfg_env('SITE_EMAIL');
+
 
 //function authMail(){
  //   include("email/authenticator.php");

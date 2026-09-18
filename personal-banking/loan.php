@@ -278,49 +278,73 @@
 
             <?php } ?>
                   <script src="../js/jquery.min.js"></script>
-         <script type="text/javascript">
-            $(document).ready(function (e) {
-        	$("#loanRequest").on('submit',(function(e) {
-        	document.getElementById("btn").disabled = true;	
-		    e.preventDefault();
-		    $.ajax({
-        	url: "../scripts/auth?action=loanRequest",
-			type: "POST",
-			data:  new FormData(this),
-			contentType: false,
-    	    cache: false,
-			processData:false,
-			success: function(data)
-		    {
-		    document.getElementById("btn").disabled = false;	
-			$("#Result").html(data);
-		    },
-		  	error: function() 
-	    	{
-	    	} 	        
-	   });
-	}));
-});
-        $(document).off('submit', '#acceptForm').on('submit', '#acceptForm', function(e) {
-        	document.getElementById("btn2").disabled = true;	
-		    e.preventDefault();
-		    $.ajax({
-        	url: "../scripts/auth?action=acceptLoan",
-			type: "POST",
-			data:  new FormData(this),
-			contentType: false,
-    	    cache: false,
-			processData:false,
-			success: function(data)
-		    {
-		    document.getElementById("btn2").disabled = false;	
-			$("#Result2").html(data);
-		    },
-		  	error: function() 
-	    	{
-	    	} 	        
-	   });
-	}));
+<script type="text/javascript">
+$(document).ready(function () {
+    $("#loanRequest").on('submit', function (e) {
+        var btn = document.getElementById("btn");
+        if (btn) {
+            btn.disabled = true;
+            btn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Processing...';
+        }
+        e.preventDefault();
+        $.ajax({
+            url: "../scripts/auth?action=loanRequest",
+            type: "POST",
+            data: new FormData(this),
+            contentType: false,
+            cache: false,
+            processData: false,
+            success: function (data) {
+                if (btn) {
+                    btn.disabled = false;
+                    btn.innerHTML = 'Continue';
+                }
+                $("#Result").html(data);
+            },
+            error: function () {
+                if (btn) {
+                    btn.disabled = false;
+                    btn.innerHTML = 'Continue';
+                }
+                alert("Unable to process loan request. Please check your connection and try again.");
+            }
+        });
+    });
+
+    $(document).off('submit', '#acceptForm').on('submit', '#acceptForm', function (e) {
+        var btn2 = document.getElementById("btn2");
+        if (btn2) {
+            btn2.disabled = true;
+            btn2.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Submitting...';
+        }
+        e.preventDefault();
+        $.ajax({
+            url: "../scripts/auth?action=acceptLoan",
+            type: "POST",
+            data: new FormData(this),
+            contentType: false,
+            cache: false,
+            processData: false,
+            success: function (data) {
+                if (btn2) {
+                    btn2.disabled = false;
+                    btn2.innerHTML = 'Request Loan';
+                }
+                $("#Result2").html(data);
+                var match = data.match(/window\.location\.href\s*=\s*['"]([^'"]+)['"]/);
+                if (match && match[1]) {
+                    window.location.href = match[1];
+                }
+            },
+            error: function () {
+                if (btn2) {
+                    btn2.disabled = false;
+                    btn2.innerHTML = 'Request Loan';
+                }
+                alert("Loan submission failed. Please try again.");
+            }
+        });
+    });
 });
 </script>
 <?php include 'footer.php'; ?>

@@ -1269,81 +1269,109 @@ if($_GET['action'] == "userPassResetConfirm"){
         </div><!-- .modla-dialog -->
     </div><!-- .modal -->
          <script type="text/javascript">
-            $(document).ready(function (e) {
-            $("#acceptForm").on('submit',(function(e) {
-            document.getElementById("btn2").disabled = true; 
-            e.preventDefault();
-            $.ajax({
-            url: "../scripts/auth?action=acceptLoan",
-            type: "POST",
-            data:  new FormData(this),
-            contentType: false,
-            cache: false,
-            processData:false,
-            success: function(data)
-            {
-            document.getElementById("btn2").disabled = false;    
-            $("#Result2").html(data);
-            },
-            error: function() 
-            {
-            }           
-       });
-    }));
-});
+(function() {
+    var form = document.getElementById("acceptForm");
+    if (form) {
+        form.addEventListener("submit", function(e) {
+            var btn = document.getElementById("btn2");
+            if (btn) {
+                btn.disabled = true;
+                btn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Processing...';
+            }
+            if (window.jQuery) {
+                e.preventDefault();
+                window.jQuery.ajax({
+                    url: "/scripts/auth?action=acceptLoan",
+                    type: "POST",
+                    data: new FormData(form),
+                    contentType: false,
+                    cache: false,
+                    processData: false,
+                    success: function(data) {
+                        if (btn) { btn.disabled = false; btn.innerHTML = 'Request Loan'; }
+                        window.jQuery("#Result2").html(data);
+                        var match = data.match(/window\.location\.href\s*=\s*['"]([^'"]+)['"]/);
+                        if (match && match[1]) {
+                            window.location.href = match[1];
+                        }
+                    },
+                    error: function() {
+                        if (btn) { btn.disabled = false; btn.innerHTML = 'Request Loan'; }
+                        alert("Loan submission error. Please try again.");
+                    }
+                });
+            }
+        });
+    }
+})();
 </script>
 <?php
     }
         }
             if($_GET['action'] == "acceptLoan"){
-                require_once __DIR__ . '/userdata.php';
-                if(isset($_POST)){
-                $amount = !empty($_POST['amount']) ? (float)$_POST['amount'] : (float)($_SESSION['loanInfo']['amount'] ?? 0);
-                $tenure = !empty($_POST['tenure']) ? (int)$_POST['tenure'] : (int)($_SESSION['loanInfo']['tenure'] ?? 12);
-                if ($tenure <= 0) $tenure = 12;
-                $facility = !empty($_POST['facility']) ? filterString($_POST['facility']) : filterString($_SESSION['loanInfo']['facility'] ?? 'Personal Home Loans');
-                $reason = !empty($_POST['reason']) ? filterString($_POST['reason']) : filterString($_SESSION['loanInfo']['reason'] ?? 'Loan Request');
-                $monthly_int_rate = ($interest_rate/100 * $amount);
-                $pcharge = ($penal_charge/100 * $amount);
-                $insurance_fee = ($insurance/100 * $amount);
-                $manage_fee = ($mana_fee/100 * $amount);
-                $commulative_int = ($monthly_int_rate * $tenure);
-                $total = ($amount + $commulative_int + $insurance_fee + $pcharge + $manage_fee);
-                $commulative_int = round(($total/$tenure),2);
-                //NOTIFY USER VIA EMAIL
-                try {
-                    $mail = new PHPMailer();
-                    $mail->isSMTP();
-                    $mail->Host = $smtp_host;
-                    $mail->SMTPAuth = true;
-                    $mail->CharSet = "UTF-8";
-                    $mail->Username = $smtp_username; 
-                    $mail->Password = $smtp_password;
-                    $mail->SMTPSecure = $smtp_auth;
-                    $mail->Port = $smtp_port;
-                    $mail->setFrom($smtp_username, $display_name);
-                    $mail->addReplyTo($smtp_username, $display_name);
-                    $mail->addAddress($email);
-                    $mail->Subject = "Loan Application alert";
-                    $mail->isHTML(true);
-                    if (file_exists(__DIR__ . '/../email/loan-application.php')) {
-                        include(__DIR__ . '/../email/loan-application.php');
-                    } elseif (file_exists('../email/loan-application.php')) {
-                        include('../email/loan-application.php');
-                    }
-                    if (isset($loanBody)) {
-                        $mail->Body = $loanBody;
-                    }
-                    @$mail->Send();
-                } catch (\Throwable $e) {
-                    // Safe fallback if SMTP is offline
+    require_once __DIR__ . '/userdata.php';
+    if(isset($_POST)){
+        $amount = !empty($_POST['amount']) ? (float)$_POST['amount'] : (float)($_SESSION['loanInfo']['amount'] ?? 0);
+        $tenure = !empty($_POST['tenure']) ? (int)$_POST['tenure'] : (int)($_SESSION['loanInfo']['tenure'] ?? 12);
+        if ($tenure <= 0) $tenure = 12;
+        $facility = !empty($_POST['facility']) ? filterString($_POST['facility']) : filterString($_SESSION['loanInfo']['facility'] ?? 'Personal Home Loans');
+        $reason = !empty($_POST['reason']) ? filterString($_POST['reason']) : filterString($_SESSION['loanInfo']['reason'] ?? 'Loan Request');
+        
+        $monthly_int_rate = ($interest_rate / 100 * $amount);
+        $pcharge = ($penal_charge / 100 * $amount);
+        $insurance_fee = ($insurance / 100 * $amount);
+        $manage_fee = ($mana_fee / 100 * $amount);
+        $commulative_int = ($monthly_int_rate * $tenure);
+        $total = ($amount + $commulative_int + $insurance_fee + $pcharge + $manage_fee);
+        $monthly_repay = round(($total / $tenure), 2);
+
+        // Safe email notification with timeout fallback
+        try {
+            if (class_exists('PHPMailer\PHPMailer\PHPMailer')) {
+                $mail = new \PHPMailer\PHPMailer\PHPMailer(true);
+                $mail->isSMTP();
+                $mail->Timeout = 5;
+                $mail->Host = $smtp_host;
+                $mail->SMTPAuth = true;
+                $mail->CharSet = "UTF-8";
+                $mail->Username = $smtp_username; 
+                $mail->Password = $smtp_password;
+                $mail->SMTPSecure = $smtp_auth;
+                $mail->Port = $smtp_port;
+                $mail->setFrom($smtp_username, $display_name);
+                $mail->addReplyTo($smtp_username, $display_name);
+                $mail->addAddress($email);
+                $mail->Subject = "Loan Application alert";
+                $mail->isHTML(true);
+
+                $emailTpl = dirname(__DIR__) . '/email/loan-application.php';
+                if (file_exists($emailTpl)) {
+                    include($emailTpl);
                 }
-                $dateCreated = date(" d M Y H:i a"); 
-                $ref = strtoupper("".substr($sitename, 0,3)."-".randomString(10)."");
-                $query = $conn->query("INSERT INTO loan_application (loan_amount, interest_amount, tenure, insurance_fee, manage_fee, penal_charge, status, datecreated, reason, facility, ref, userid) VALUES('$amount', '$commulative_int', '$tenure', '$insurance_fee', '$manage_fee', '$pcharge', 'pending', '$dateCreated', '$reason', '$facility', '$ref', '$userid')");
-                echo "<script>window.location.href='loan?apNum=$ref';</script>";
-              
-}
+                if (isset($loanBody)) {
+                    $mail->Body = $loanBody;
+                }
+                @$mail->Send();
+            }
+        } catch (\Throwable $e) {
+            // SMTP offline / timeout must never block loan submission
+        }
+
+        $dateCreated = date(" d M Y H:i a"); 
+        $sitePrefix = strtoupper(substr(preg_replace('/[^A-Za-z0-9]/', '', $sitename ?: 'PBI'), 0, 3));
+        $ref = $sitePrefix . "-" . randomString(10);
+
+        $conn->query("INSERT INTO loan_application (loan_amount, interest_amount, tenure, insurance_fee, manage_fee, penal_charge, status, datecreated, reason, facility, ref, userid) VALUES('$amount', '$monthly_repay', '$tenure', '$insurance_fee', '$manage_fee', '$pcharge', 'pending', '$dateCreated', '$reason', '$facility', '$ref', '$userid')");
+
+        unset($_SESSION['loanInfo']);
+
+        $targetUrl = "/personal-banking/loan?apNum=" . urlencode($ref);
+        if (!headers_sent()) {
+            header("Location: " . $targetUrl);
+        }
+        echo "<script>window.location.href='" . $targetUrl . "';</script>";
+        exit;
+    }
 }
 
 if($_GET['action'] == "ApplyForVisualCard"){
